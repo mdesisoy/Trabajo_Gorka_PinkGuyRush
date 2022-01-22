@@ -1,1 +1,8 @@
 IDEAS PARA PROYECTO:
+
+  -Mapas con fondo movimiento/animado
+  -Plataformas
+  -Animaciones personajes
+  -Items para hacer cosas
+  -Personajes: 2 para elegir protagonistas -> selector personajes
+               Enemigos
