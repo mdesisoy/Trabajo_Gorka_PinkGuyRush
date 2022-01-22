@@ -3,7 +3,7 @@ IDEAS PARA PROYECTO:
   -Mapas con fondo movimiento/animado
   -Plataformas
   -Animaciones personajes
-  -Items para hacer cosas
+  -Items para hacer cosas -> inventario
   -Personajes: 2 para elegir protagonistas -> selector personajes
                Enemigos
   -Menu_ Pantalla incio, Settings, etc
