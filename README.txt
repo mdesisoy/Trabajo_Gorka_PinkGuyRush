@@ -1,1 +1,1 @@
-tonto el que lo lea
+Gorka <3
