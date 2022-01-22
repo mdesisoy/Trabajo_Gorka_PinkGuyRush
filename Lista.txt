@@ -6,3 +6,4 @@ IDEAS PARA PROYECTO:
   -Items para hacer cosas
   -Personajes: 2 para elegir protagonistas -> selector personajes
                Enemigos
+  -Menu_ Pantalla incio, Settings, etc
