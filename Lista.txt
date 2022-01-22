@@ -7,3 +7,5 @@ IDEAS PARA PROYECTO:
   -Personajes: 2 para elegir protagonistas -> selector personajes
                Enemigos
   -Menu_ Pantalla incio, Settings, etc
+  -NPC pesado
+  -Cuando el personaje no se mueva por mucho tiempo hacer que te mire o diga algo
