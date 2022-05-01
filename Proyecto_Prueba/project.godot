@@ -14,7 +14,7 @@ _global_script_class_icons={
 
 [application]
 
-config/name="Enemigo-simple"
+config/name="Proyecto-prueba"
 run/main_scene="res://final/scenes/Main.tscn"
 config/icon="res://icon.png"
 
