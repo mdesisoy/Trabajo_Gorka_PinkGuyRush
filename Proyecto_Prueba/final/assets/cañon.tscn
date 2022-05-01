@@ -1,0 +1,39 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://cañon.gd" type="Script" id=1]
+
+[sub_resource type="CircleShape2D" id=1]
+radius = 31.0
+
+[node name="cañon" type="Node2D"]
+
+[node name="cañon" type="KinematicBody2D" parent="."]
+script = ExtResource( 1 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="cañon"]
+shape = SubResource( 1 )
+
+[node name="ColorRect" type="ColorRect" parent="cañon/CollisionShape2D"]
+margin_top = -15.0
+margin_right = 53.0
+margin_bottom = 15.0
+color = Color( 0.972549, 0, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_left = -28.0
+margin_top = -28.0
+margin_right = 26.0
+margin_bottom = 28.0
+color = Color( 0.172549, 0.827451, 0.0392157, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 3.0
+autostart = true
+
+[connection signal="timeout" from="Timer" to="cañon" method="_on_Timer_timeout"]
