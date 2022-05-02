@@ -14,10 +14,10 @@ var health : int = 100
 var _is_able_to_jump : bool
 var _jump_was_pressed : bool
 
-
 func _ready() -> void:
 	animations = $AnimatedSprite
 	_is_able_to_jump = true
+	
 	pass
 
 func _physics_process(_delta) -> void:
@@ -72,7 +72,12 @@ func _remember_jump_time() -> void:
 func damage_player(damage):
 	health -= damage
 
+func vida_cero():
+	if health <= 0:
+		get_tree().reload_current_scene()
+
 func _on_Hurtbox_area_entered(area):
 	if area.get_parent().is_in_group("enemy"):
 		damage_player(area.get_parent().damage)
+		vida_cero()
 	pass # Replace with function body.

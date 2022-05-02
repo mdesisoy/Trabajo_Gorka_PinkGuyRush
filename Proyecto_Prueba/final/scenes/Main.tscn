@@ -149,6 +149,10 @@ texture = ExtResource( 12 )
 energy = 1.2
 script = ExtResource( 13 )
 
+[node name="Salud" parent="." instance=ExtResource( 19 )]
+position = Vector2( 1702, 343 )
+scale = Vector2( 0.5, 0.5 )
+
 [node name="cañon" parent="." instance=ExtResource( 18 )]
 position = Vector2( 430, 373 )
 
@@ -198,9 +202,5 @@ position = Vector2( 173, 284 )
 
 [node name="Moneda10" parent="." instance=ExtResource( 7 )]
 position = Vector2( 79, 283 )
-
-[node name="Salud" parent="." instance=ExtResource( 19 )]
-position = Vector2( 1708, 347 )
-scale = Vector2( 0.5, 0.5 )
 
 [editable path="BarraSalud"]
