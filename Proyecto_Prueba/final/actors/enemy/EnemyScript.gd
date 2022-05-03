@@ -1,6 +1,7 @@
 extends KinematicBody2D
 
 export (int) var damage = 20
+export (int) var vida = 50
 
 onready var hitbox = $Hitbox
 
@@ -38,3 +39,13 @@ func _move():
 		_flip()
 	pass
 
+func vida_cero():
+	if vida <= 0:
+		queue_free()
+
+func _on_deadBox_area_entered(area):
+	if area.get_parent().is_in_group("player"):
+		area.get_parent().motion.y = area.get_parent().JUMP_H
+		area.get_parent().health += damage
+		vida -= 50
+		vida_cero()
