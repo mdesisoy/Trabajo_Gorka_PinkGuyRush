@@ -24,6 +24,30 @@ tracks/0/keys = {
 "update": 0,
 "values": [ Vector2( 100, 0 ) ]
 }
+tracks/1/type = "value"
+tracks/1/path = NodePath("Light2D:energy")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 1.5 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Light2D:texture_scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 2.3 ]
+}
 
 [sub_resource type="Animation" id=6]
 resource_name = "anim1"
@@ -39,6 +63,30 @@ tracks/0/keys = {
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
 "values": [ Vector2( 60, 0 ), Vector2( 2000, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Light2D:energy")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.5, 1, 1.5, 2, 2.5, 3, 3.5, 4, 4.5, 5, 5.5, 6, 6.5, 7 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 2.0, 1.0, 2.0, 1.0, 2.0, 1.0, 2.0, 1.0, 2.0, 1.0, 2.0, 1.0, 2.0, 1.0, 2.0 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Light2D:texture_scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.5, 1, 1.5, 2, 2.5, 3, 3.5, 4, 4.5, 5, 5.5, 6, 6.5, 7 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 2.3, 1.5, 2.3, 1.5, 2.3, 1.5, 2.3, 1.5, 2.3, 1.5, 2.3, 1.5, 2.3, 1.5, 2.3 ]
 }
 
 [node name="bola" type="Node2D" groups=["enemy"]]
@@ -72,7 +120,8 @@ anims/anim1 = SubResource( 6 )
 position = Vector2( 7, 1 )
 scale = Vector2( 0.153809, 0.158447 )
 texture = ExtResource( 2 )
-texture_scale = 1.76
-energy = 1.49
+texture_scale = 2.3
+color = Color( 1, 0.494118, 0, 1 )
+energy = 1.5
 
 [connection signal="body_entered" from="bola/Area2D" to="." method="_on_Area2D_body_entered"]

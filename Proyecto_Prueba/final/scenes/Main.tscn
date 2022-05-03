@@ -157,6 +157,9 @@ position = Vector2( 428, 374 )
 [node name="cañon2" parent="." instance=ExtResource( 18 )]
 position = Vector2( 1008, 235 )
 
+[node name="cañon3" parent="." instance=ExtResource( 18 )]
+position = Vector2( 1733, 174 )
+
 [node name="Enemy" parent="." instance=ExtResource( 4 )]
 position = Vector2( 441, 577 )
 
@@ -204,8 +207,5 @@ position = Vector2( 173, 284 )
 
 [node name="Moneda10" parent="." instance=ExtResource( 7 )]
 position = Vector2( 79, 283 )
-
-[node name="cañon3" parent="." instance=ExtResource( 18 )]
-position = Vector2( 1733, 174 )
 
 [editable path="BarraSalud"]

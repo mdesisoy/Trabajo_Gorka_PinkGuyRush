@@ -8,4 +8,5 @@ func _on_Area2D_body_entered(body):
 			body.health += vida
 		elif body.health < 100 and body.health > 80:
 			body.health += 100-body.health
+		body.verde()
 		queue_free()

@@ -7,6 +7,8 @@ var preBola = preload ("res://final/assets/bola.tscn")
 
 func _physics_process(delta):
 	look_at(player.get_position())
+	$Light2D/AnimationPlayer.play("color")
+	$Light2D/AnimationPlayer2.play("luz")
 	distance2player = self.global_position.distance_to(player.global_position)
 
 func _on_Timer_timeout():

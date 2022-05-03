@@ -45,7 +45,13 @@ func vida_cero():
 
 func _on_deadBox_area_entered(area):
 	if area.get_parent().is_in_group("player"):
-		area.get_parent().motion.y = area.get_parent().JUMP_H
-		area.get_parent().health += damage
+		area.get_parent().motion.y = area.get_parent().JUMP_H/1.5
 		vida -= 50
 		vida_cero()
+
+
+func _on_dao_area_entered(area):
+	if area.get_parent().is_in_group("player"):
+		area.get_parent().health -= damage
+		area.get_parent().rojo()
+		area.get_parent().vida_cero()

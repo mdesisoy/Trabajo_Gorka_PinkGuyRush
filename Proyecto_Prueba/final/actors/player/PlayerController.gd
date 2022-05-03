@@ -69,15 +69,12 @@ func _remember_jump_time() -> void:
 	yield(get_tree().create_timer(.1), "timeout")
 	_jump_was_pressed = false
 
-func damage_player(damage):
-	health -= damage
-
 func vida_cero():
 	if health <= 0:
 		get_tree().reload_current_scene()
 
-func _on_Hurtbox_area_entered(area):
-	if area.get_parent().is_in_group("enemy"):
-		damage_player(area.get_parent().damage)
-		vida_cero()
-	pass # Replace with function body.
+func rojo():
+	$AnimationPlayer.play("rojo")
+	
+func verde():
+	$AnimationPlayer.play("verde")
