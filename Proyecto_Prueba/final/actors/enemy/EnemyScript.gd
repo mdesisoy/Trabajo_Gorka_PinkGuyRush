@@ -47,6 +47,7 @@ func _on_deadBox_area_entered(area):
 	if area.get_parent().is_in_group("player"):
 		area.get_parent().motion.y = area.get_parent().JUMP_H/1.5
 		vida -= 50
+		$AnimationPlayer.play("dolor")
 		vida_cero()
 
 

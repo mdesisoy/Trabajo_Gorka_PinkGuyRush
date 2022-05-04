@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=2]
+[gd_scene load_steps=22 format=2]
 
 [ext_resource path="res://final/assets/Grassland/Background parts/5 - Sky_color.png" type="Texture" id=1]
 [ext_resource path="res://final/assets/tileset/grassland.tres" type="TileSet" id=2]
@@ -19,6 +19,7 @@
 [ext_resource path="res://final/assets/Grassland/Background parts/2 - Hills.png" type="Texture" id=17]
 [ext_resource path="res://final/assets/cañon.tscn" type="PackedScene" id=18]
 [ext_resource path="res://final/assets/Salud.tscn" type="PackedScene" id=19]
+[ext_resource path="res://final/assets/plataforma.tscn" type="PackedScene" id=20]
 
 [sub_resource type="DynamicFont" id=1]
 size = 67
@@ -67,6 +68,10 @@ __meta__ = {
 }
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
+
+[node name="plataforma" parent="." instance=ExtResource( 20 )]
+position = Vector2( 1380, 473 )
+scale = Vector2( 0.3, 0.3 )
 
 [node name="Player" parent="." instance=ExtResource( 3 )]
 position = Vector2( 90, 473 )
@@ -135,7 +140,7 @@ motion_scale = Vector2( 0.65, 0.1 )
 motion_mirroring = Vector2( 576, 0 )
 
 [node name="Sprite" type="Sprite" parent="Player/Camera2D/ParallaxBackground/ParallaxLayer6"]
-position = Vector2( -6.5, -237.333 )
+position = Vector2( -7.46154, -228.167 )
 scale = Vector2( 2, 2.09135 )
 texture = ExtResource( 16 )
 centered = false
@@ -162,21 +167,25 @@ position = Vector2( 1733, 174 )
 
 [node name="Enemy" parent="." instance=ExtResource( 4 )]
 position = Vector2( 441, 577 )
+vida = 100
 
 [node name="Enemy2" parent="." instance=ExtResource( 4 )]
 position = Vector2( 814, 562 )
 scale = Vector2( 3, 3 )
 damage = 20
-vida = 100
+vida = 200
 
 [node name="Enemy3" parent="." instance=ExtResource( 4 )]
 position = Vector2( 1341, 412 )
+vida = 100
 
 [node name="Enemy4" parent="." instance=ExtResource( 4 )]
 position = Vector2( 483, 254 )
+vida = 100
 
 [node name="Enemy5" parent="." instance=ExtResource( 4 )]
 position = Vector2( 1008, 412 )
+vida = 100
 
 [node name="Moneda" parent="." instance=ExtResource( 7 )]
 position = Vector2( 608, 510 )
@@ -207,5 +216,9 @@ position = Vector2( 173, 284 )
 
 [node name="Moneda10" parent="." instance=ExtResource( 7 )]
 position = Vector2( 79, 283 )
+
+[node name="Node2D" parent="." instance=ExtResource( 20 )]
+position = Vector2( 564, 210 )
+scale = Vector2( 0.3, 0.3 )
 
 [editable path="BarraSalud"]
