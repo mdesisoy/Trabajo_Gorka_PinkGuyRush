@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/goD.mp3-9ec878b3a048cc8baaec67a3da9b88fb.mp3str"
+
+[deps]
+
+source_file="res://Assets/Audio/goD.mp3"
+dest_files=[ "res://.import/goD.mp3-9ec878b3a048cc8baaec67a3da9b88fb.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

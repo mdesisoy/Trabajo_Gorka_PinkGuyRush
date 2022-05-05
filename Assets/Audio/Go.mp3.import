@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Go.mp3-4bb0106749aa385cc5b1f9852dd196c5.mp3str"
+
+[deps]
+
+source_file="res://Assets/Audio/Go.mp3"
+dest_files=[ "res://.import/Go.mp3-4bb0106749aa385cc5b1f9852dd196c5.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
