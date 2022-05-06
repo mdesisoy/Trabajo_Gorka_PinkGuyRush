@@ -9,7 +9,7 @@
 [ext_resource path="res://final/assets/img/Moneda.tscn" type="PackedScene" id=7]
 [ext_resource path="res://final/assets/Coin.png" type="Texture" id=8]
 [ext_resource path="res://final/assets/Retro-Gaming/Retro Gaming.ttf" type="DynamicFontData" id=9]
-[ext_resource path="res://final/scenes/gameScript.gd" type="Script" id=10]
+[ext_resource path="res://final/scenes/GameScript.gd" type="Script" id=10]
 [ext_resource path="res://final/scenes/MScript.gd" type="Script" id=11]
 [ext_resource path="res://final/assets/light.png" type="Texture" id=12]
 [ext_resource path="res://final/scenes/Light2D.gd" type="Script" id=13]
