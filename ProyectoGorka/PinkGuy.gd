@@ -4,7 +4,8 @@ var movement= Vector2(0,0)
 var on_ground=false
 var is_wallsliding=false
 var jump_count=0
-var coin_count=0;
+var Apple_count=0;
+var Banana_count=0;
 const SPEED=300
 const GRAVITY=9
 const JUMPFORCE=-330
@@ -20,7 +21,7 @@ func _physics_process(delta):
 		$AnimatedSprite.flip_h=true
 	else:
 		$AnimatedSprite.play("Idle")
-	if Input.is_action_just_pressed("Jump"):
+	if Input.is_action_just_pressed("Up"):
 		if on_ground ==true:
 			movement.y=JUMPFORCE
 			on_ground=false
@@ -38,11 +39,11 @@ func _physics_process(delta):
 		jump_count=0
 	else: 
 		if movement.y<0 and jump_count==1:
-			$AnimatedSprite.play("Jump")
+			$AnimatedSprite.play("jump")
 		elif movement.y<0 and jump_count==2:
 			$AnimatedSprite.visible=false
 			$Sprite.visible=true
-			$Animaciones.play("DoubleJump")
+			$Animaciones.play("Double")
 			if Input.is_action_pressed("Right"):
 				$Sprite.flip_h=false
 			elif Input.is_action_pressed("Left"):
@@ -52,11 +53,12 @@ func _physics_process(delta):
 			$Sprite.visible=false
 			$AnimatedSprite.visible=true
 			$AnimatedSprite.play("Fall")
-	if coin_count==3:
-		get_tree().change_scene("res://Scene.tscn")
-func add_Coin():
-	coin_count=coin_count+1	
-	print("Tengo ",coin_count," monedas")
+func add_Apple():
+	Apple_count+=1
+	print("Tengo ",Apple_count," manzanas")
+func add_Banana():
+	Apple_count+=1
+	print("Tengo ",Banana_count," platanos")
 func ouch(var enemyx):
 	$AnimatedSprite.visible=false
 	$Sprite2.visible=true
@@ -66,5 +68,4 @@ func ouch(var enemyx):
 	elif movement.x>enemyx:
 		movement.x=300
 	$Timer.start();
-func _on_Timer_timeout():
-	get_tree().change_scene("res://proyect1/rananinja.tscn")
+
