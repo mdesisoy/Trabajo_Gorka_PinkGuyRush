@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://Font/fuente_menu.tres" type="DynamicFont" id=1]
 [ext_resource path="res://escenas/Fondo_movimiento.tscn" type="PackedScene" id=2]
@@ -7,9 +7,6 @@
 [ext_resource path="res://Estilos/BotonPressed.tres" type="StyleBox" id=5]
 [ext_resource path="res://Font/Kenney Pixel.ttf" type="DynamicFontData" id=6]
 [ext_resource path="res://scripts/Niveles.gd" type="Script" id=7]
-[ext_resource path="res://Assets/Free/Menu/Buttons/music.png" type="Texture" id=8]
-[ext_resource path="res://Assets/Free/Menu/Buttons/no_music.png" type="Texture" id=9]
-[ext_resource path="res://escenas/Audio.tscn" type="PackedScene" id=10]
 [ext_resource path="res://escenas/MenuPausa.tscn" type="PackedScene" id=11]
 
 [sub_resource type="DynamicFont" id=4]
@@ -111,28 +108,7 @@ text = "Nivel 2"
 
 [node name="ParallaxBackground" parent="." instance=ExtResource( 2 )]
 
-[node name="Audio" parent="." instance=ExtResource( 10 )]
-volume_db = -12.235
-
-[node name="HBoxContainer2" type="HBoxContainer" parent="."]
-margin_left = 1800.0
-margin_top = 27.0
-margin_right = 2312.0
-margin_bottom = 539.0
-rect_scale = Vector2( 0.16971, 0.16079 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="TextureButton" type="TextureButton" parent="HBoxContainer2"]
-margin_right = 512.0
-margin_bottom = 512.0
-toggle_mode = true
-texture_normal = ExtResource( 8 )
-texture_pressed = ExtResource( 9 )
-
 [node name="MenuPausa" parent="." instance=ExtResource( 11 )]
 visible = false
 
 [connection signal="pressed" from="HBoxContainer/VOLVER" to="." method="_on_VOLVER_pressed"]
-[connection signal="button_down" from="HBoxContainer2/TextureButton" to="." method="_on_TextureButton_button_down"]

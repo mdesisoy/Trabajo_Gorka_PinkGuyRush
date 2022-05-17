@@ -1,0 +1,96 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Font/fuente_menu.tres" type="DynamicFont" id=1]
+[ext_resource path="res://Estilos/BotonNormal.tres" type="StyleBox" id=2]
+[ext_resource path="res://scripts/Opciones_menu.gd" type="Script" id=3]
+
+[node name="Opciones" type="Popup"]
+visible = true
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -762.5
+margin_top = -429.5
+margin_right = 762.5
+margin_bottom = 429.5
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Fondo" type="ColorRect" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -770.0
+margin_top = -427.0
+margin_right = 770.0
+margin_bottom = 427.0
+color = Color( 0.588235, 0.917647, 0.454902, 0.670588 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -722.0
+margin_top = -386.5
+margin_right = 722.0
+margin_bottom = 386.5
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Grid" type="GridContainer" parent="MarginContainer"]
+margin_right = 1444.0
+margin_bottom = 773.0
+custom_constants/vseparation = 20
+columns = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Modo de pantalla" type="Label" parent="MarginContainer/Grid"]
+margin_right = 707.0
+margin_bottom = 105.0
+size_flags_vertical = 1
+custom_fonts/font = ExtResource( 1 )
+text = "Modo de pantalla"
+
+[node name="Opciones_pantalla" type="OptionButton" parent="MarginContainer/Grid"]
+margin_left = 943.0
+margin_right = 1444.0
+margin_bottom = 105.0
+size_flags_horizontal = 10
+custom_fonts/font = ExtResource( 1 )
+text = "Fullscreen"
+items = [ "Windowed", null, false, 0, null, "Fullscreen", null, false, 1, null ]
+selected = 1
+
+[node name="Brillo" type="Label" parent="MarginContainer/Grid"]
+margin_top = 125.0
+margin_right = 707.0
+margin_bottom = 224.0
+custom_fonts/font = ExtResource( 1 )
+text = "Brillo"
+
+[node name="Barra_brillo" type="HSlider" parent="MarginContainer/Grid"]
+margin_left = 1044.0
+margin_top = 125.0
+margin_right = 1444.0
+margin_bottom = 224.0
+rect_min_size = Vector2( 400, 0 )
+size_flags_horizontal = 8
+size_flags_vertical = 1
+custom_styles/slider = ExtResource( 2 )
+max_value = 2.0
+step = 0.1
+value = 1.0
+
+[connection signal="item_selected" from="MarginContainer/Grid/Opciones_pantalla" to="." method="_on_Opciones_pantalla_item_selected"]
+[connection signal="value_changed" from="MarginContainer/Grid/Barra_brillo" to="." method="_on_Barra_brillo_value_changed"]
