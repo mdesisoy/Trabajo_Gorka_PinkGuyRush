@@ -1,12 +1,13 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://sourcecode/Tilesets/tilesetLevel1.tres" type="TileSet" id=1]
 [ext_resource path="res://sourcecode/Actors/Ambient/Start_point.tscn" type="PackedScene" id=2]
 [ext_resource path="res://sourcecode/Actors/Ambient/End_Point.tscn" type="PackedScene" id=3]
-[ext_resource path="res://assets/parallax_demon_woods_pack/layers/parallax-demon-woods-mid-trees.png" type="Texture" id=4]
-[ext_resource path="res://assets/parallax_demon_woods_pack/layers/parallax-demon-woods-bg.png" type="Texture" id=5]
-[ext_resource path="res://assets/parallax_demon_woods_pack/layers/parallax-demon-woods-close-trees.png" type="Texture" id=6]
-[ext_resource path="res://assets/parallax_demon_woods_pack/layers/parallax-demon-woods-far-trees.png" type="Texture" id=7]
+[ext_resource path="res://assets/FondosParallax/FondoParallax1/layers/parallax-demon-woods-mid-trees.png" type="Texture" id=4]
+[ext_resource path="res://assets/FondosParallax/FondoParallax1/layers/parallax-demon-woods-bg.png" type="Texture" id=5]
+[ext_resource path="res://assets/FondosParallax/FondoParallax1/layers/parallax-demon-woods-close-trees.png" type="Texture" id=6]
+[ext_resource path="res://assets/FondosParallax/FondoParallax1/layers/parallax-demon-woods-far-trees.png" type="Texture" id=7]
+[ext_resource path="res://sourcecode/Actors/SinUso/Player.tscn" type="PackedScene" id=8]
 
 [node name="Level_1" type="Node2D"]
 
@@ -66,3 +67,6 @@ position = Vector2( 0, -384 )
 scale = Vector2( 1, 1.41176 )
 texture = ExtResource( 6 )
 centered = false
+
+[node name="Player" parent="." instance=ExtResource( 8 )]
+position = Vector2( 42, -68 )

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/parallax-demon-woods-mid-trees.png-799490663e3712ea7cdaf0bb36b043ad.stex"
+path="res://.import/parallax-demon-woods-bg.png-1eb06ac460d2f0997fd932b303d76b4a.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/parallax_demon_woods_pack/layers/parallax-demon-woods-mid-trees.png"
-dest_files=[ "res://.import/parallax-demon-woods-mid-trees.png-799490663e3712ea7cdaf0bb36b043ad.stex" ]
+source_file="res://assets/FondosParallax/FondoParallax1/layers/parallax-demon-woods-bg.png"
+dest_files=[ "res://.import/parallax-demon-woods-bg.png-1eb06ac460d2f0997fd932b303d76b4a.stex" ]
 
 [params]
 

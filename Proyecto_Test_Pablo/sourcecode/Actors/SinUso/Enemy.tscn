@@ -4,7 +4,7 @@
 [ext_resource path="res://assets/Enemies/Duck/Jump (36x36).png" type="Texture" id=2]
 [ext_resource path="res://assets/Enemies/Duck/Jump Anticipation (36x36).png" type="Texture" id=3]
 [ext_resource path="res://assets/Enemies/Duck/Idle (36x36).png" type="Texture" id=4]
-[ext_resource path="res://sourcecode/Actors/Enemy.gd" type="Script" id=5]
+[ext_resource path="res://sourcecode/Actors/SinUso/Enemy.gd" type="Script" id=5]
 [ext_resource path="res://assets/Enemies/Duck/Fall (36x36).png" type="Texture" id=6]
 
 [sub_resource type="AtlasTexture" id=26]
