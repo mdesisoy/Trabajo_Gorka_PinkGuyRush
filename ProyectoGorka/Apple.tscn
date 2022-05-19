@@ -108,11 +108,11 @@ __meta__ = {
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 1 )
-frame = 11
+frame = 6
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( 0, -1 )
 shape = SubResource( 21 )
 
-[connection signal="body_entered" from="." to="." method="_on_Area2D_body_entered"]
+[connection signal="body_entered" from="." to="." method="_on_Apple_body_entered"]

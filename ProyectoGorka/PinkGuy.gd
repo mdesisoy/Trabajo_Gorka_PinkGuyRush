@@ -57,7 +57,7 @@ func add_Apple():
 	Apple_count+=1
 	print("Tengo ",Apple_count," manzanas")
 func add_Banana():
-	Apple_count+=1
+	Banana_count+=1
 	print("Tengo ",Banana_count," platanos")
 func ouch(var enemyx):
 	$AnimatedSprite.visible=false
@@ -68,4 +68,6 @@ func ouch(var enemyx):
 	elif movement.x>enemyx:
 		movement.x=300
 	$Timer.start();
-
+func rebote(var y):
+	movement.y+=400
+	
