@@ -3,7 +3,7 @@ extends KinematicBody2D
 onready var player = get_node("/root/Main/Player")
 var distance2player
 
-var preBola = preload ("res://final/assets/bola.tscn")
+var preBola = preload ("res://final/assets/Cañon/bola.tscn")
 
 func _physics_process(delta):
 	look_at(player.get_position())

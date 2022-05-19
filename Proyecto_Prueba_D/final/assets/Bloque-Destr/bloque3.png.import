@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/cañon.png-b3fff604a129bd67fa6bb344eadaa944.stex"
+path="res://.import/bloque3.png-99ebac0e2cd384791492e2791cb1c3bf.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://final/assets/cañon.png"
-dest_files=[ "res://.import/cañon.png-b3fff604a129bd67fa6bb344eadaa944.stex" ]
+source_file="res://final/assets/Bloque-Destr/bloque3.png"
+dest_files=[ "res://.import/bloque3.png-99ebac0e2cd384791492e2791cb1c3bf.stex" ]
 
 [params]
 

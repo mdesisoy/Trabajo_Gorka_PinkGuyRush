@@ -17,7 +17,7 @@
 [ext_resource path="res://final/assets/Grassland/Background parts/3 - Cloud_cover_1.png" type="Texture" id=15]
 [ext_resource path="res://final/assets/Grassland/Background parts/1 - Foreground_scenery.png" type="Texture" id=16]
 [ext_resource path="res://final/assets/Grassland/Background parts/2 - Hills.png" type="Texture" id=17]
-[ext_resource path="res://final/assets/cañon.tscn" type="PackedScene" id=18]
+[ext_resource path="res://final/assets/Cañon/cañon.tscn" type="PackedScene" id=18]
 [ext_resource path="res://final/assets/Salud.tscn" type="PackedScene" id=19]
 [ext_resource path="res://final/assets/plataforma.tscn" type="PackedScene" id=20]
 
