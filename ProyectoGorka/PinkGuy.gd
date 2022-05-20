@@ -6,9 +6,9 @@ var is_wallsliding=false
 var jump_count=0
 var Apple_count=0;
 var Banana_count=0;
-const SPEED=300
+const SPEED=200
 const GRAVITY=9
-const JUMPFORCE=-330
+const JUMPFORCE=-230
 const FLOOR=Vector2(0,-1)
 func _physics_process(delta):
 	if Input.is_action_pressed("Right"):
@@ -34,7 +34,7 @@ func _physics_process(delta):
 	movement=move_and_slide(movement,FLOOR)
 	movement.x=lerp(movement.x,0,0.1)
 	
-	if is_on_floor():
+	if is_on_floor() or nextToWall():
 		on_ground=true
 		jump_count=0
 	else: 
@@ -53,6 +53,21 @@ func _physics_process(delta):
 			$Sprite.visible=false
 			$AnimatedSprite.visible=true
 			$AnimatedSprite.play("Fall")
+	
+	if nextToWall() and movement.y>20:
+		movement.y=20
+		if nextToRightWall():
+			$AnimatedSprite.flip_h=false
+			$AnimatedSprite.play("Wall")
+		if nextToLeftWall():
+			$AnimatedSprite.flip_h=true
+			$AnimatedSprite.play("Wall")
+func nextToWall():
+	return nextToRightWall() or nextToLeftWall()
+func nextToRightWall():
+	return $RightWall.is_colliding();
+func nextToLeftWall():
+	return $LeftWall.is_colliding();
 func add_Apple():
 	Apple_count+=1
 	print("Tengo ",Apple_count," manzanas")
