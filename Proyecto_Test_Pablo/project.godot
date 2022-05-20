@@ -12,7 +12,7 @@ _global_script_classes=[ {
 "base": "KinematicBody2D",
 "class": "Actor",
 "language": "GDScript",
-"path": "res://sourcecode/Actors/Actor.gd"
+"path": "res://sourcecode/Actors/SinUso/Actor.gd"
 } ]
 _global_script_class_icons={
 "Actor": ""
@@ -21,7 +21,7 @@ _global_script_class_icons={
 [application]
 
 config/name="Proyecto_Test_Pablo"
-run/main_scene="res://sourcecode/Actors/Player.tscn"
+run/main_scene="res://sourcecode/Actors/SinUso/Player.tscn"
 config/icon="res://icon.png"
 
 [display]
