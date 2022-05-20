@@ -3,6 +3,9 @@ extends Control
 var music_on = true
 onready var opciones = $Opciones
 
+func _ready():
+	Audio._play_music()
+
 func _on_Salir_pressed():
 	get_tree().quit()
 
@@ -16,6 +19,6 @@ func _on_Jugar_pressed():
 func _on_TextureButton_button_down():
 	music_on = !music_on
 	if(music_on):
-		get_tree().get_nodes_in_group("bgm")[0].volume_db = -12.235
+		Audio._play_music()
 	else:
-		get_tree().get_nodes_in_group("bgm")[0].volume_db = -80
+		Audio._stop_music()

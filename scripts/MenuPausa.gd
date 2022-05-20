@@ -1,6 +1,7 @@
 extends Control
 
 var is_paused = false setget set_is_paused
+onready var opciones = $Opciones
 
 func _unhandled_input(event):
 	if event.is_action_pressed("pause"):
@@ -17,4 +18,9 @@ func _on_Reanudar_pressed():
 
 
 func _on_Salir_pressed():
-	get_tree().quit()
+	self.is_paused = false
+	get_tree().change_scene("res://escenas/Menu.tscn")
+
+
+func _on_Opciones_pressed():
+	opciones.popup_centered()
