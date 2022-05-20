@@ -1,5 +1,13 @@
-extends AudioStreamPlayer
+extends Node
 
-func musica_fondo(musica):
-	self.stream = musica
-	self.play
+var musica = load("res://Assets/Audio/Background-music.ogg")
+
+func _ready():
+	pass
+
+func _play_music():
+	$MusicaMenuyNiveles.stream = musica
+	$MusicaMenuyNiveles.play()
+	
+func _stop_music():
+	$MusicaMenuyNiveles.stop()
