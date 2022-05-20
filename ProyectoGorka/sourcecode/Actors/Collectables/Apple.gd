@@ -6,6 +6,7 @@ func _on_Area2D_body_entered(body):
 		get_parent().get_parent().puntos += 1
 		body.amarillo()
 		$AnimatedSprite.play("collected")
+		$AudioStreamPlayer2D.play()
 
 func _on_AnimatedSprite_animation_finished():
 	if $AnimatedSprite.animation == "collected":

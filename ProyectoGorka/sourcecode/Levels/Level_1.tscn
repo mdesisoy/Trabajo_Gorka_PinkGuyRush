@@ -86,12 +86,99 @@ position = Vector2( 3376, -176 )
 position = Vector2( 3904, -272 )
 
 [node name="Frutas" type="Node2D" parent="."]
+position = Vector2( 0, -16 )
 
 [node name="Banana" parent="Frutas" instance=ExtResource( 11 )]
-position = Vector2( 104, -40 )
+position = Vector2( 360, -152 )
 
 [node name="Apple" parent="Frutas" instance=ExtResource( 13 )]
 position = Vector2( 216, -41 )
+scale = Vector2( 2, 2 )
+
+[node name="Banana2" parent="Frutas" instance=ExtResource( 11 )]
+position = Vector2( 1088, -344 )
+
+[node name="Banana3" parent="Frutas" instance=ExtResource( 11 )]
+position = Vector2( 1160, -344 )
+
+[node name="Apple2" parent="Frutas" instance=ExtResource( 13 )]
+position = Vector2( 664, -64 )
+scale = Vector2( 2, 2 )
+
+[node name="Apple3" parent="Frutas" instance=ExtResource( 13 )]
+position = Vector2( 888, -56 )
+scale = Vector2( 2, 2 )
+
+[node name="Apple4" parent="Frutas" instance=ExtResource( 13 )]
+position = Vector2( 920, -72 )
+scale = Vector2( 2, 2 )
+
+[node name="Apple5" parent="Frutas" instance=ExtResource( 13 )]
+position = Vector2( 960, -56 )
+scale = Vector2( 2, 2 )
+
+[node name="Apple6" parent="Frutas" instance=ExtResource( 13 )]
+position = Vector2( 1320, -72 )
+scale = Vector2( 2, 2 )
+
+[node name="Banana4" parent="Frutas" instance=ExtResource( 11 )]
+position = Vector2( 1792, -40 )
+
+[node name="Apple7" parent="Frutas" instance=ExtResource( 13 )]
+position = Vector2( 2080, -96 )
+scale = Vector2( 2, 2 )
+
+[node name="Apple8" parent="Frutas" instance=ExtResource( 13 )]
+position = Vector2( 2024, -56 )
+scale = Vector2( 2, 2 )
+
+[node name="Apple9" parent="Frutas" instance=ExtResource( 13 )]
+position = Vector2( 2136, -56 )
+scale = Vector2( 2, 2 )
+
+[node name="Apple10" parent="Frutas" instance=ExtResource( 13 )]
+position = Vector2( 2496, -88 )
+scale = Vector2( 2, 2 )
+
+[node name="Banana5" parent="Frutas" instance=ExtResource( 11 )]
+position = Vector2( 2072, -296 )
+
+[node name="Apple11" parent="Frutas" instance=ExtResource( 13 )]
+position = Vector2( 2728, -120 )
+scale = Vector2( 2, 2 )
+
+[node name="Apple12" parent="Frutas" instance=ExtResource( 13 )]
+position = Vector2( 2824, -72 )
+scale = Vector2( 2, 2 )
+
+[node name="Apple13" parent="Frutas" instance=ExtResource( 13 )]
+position = Vector2( 3192, -152 )
+scale = Vector2( 2, 2 )
+
+[node name="Apple14" parent="Frutas" instance=ExtResource( 13 )]
+position = Vector2( 3216, -80 )
+scale = Vector2( 2, 2 )
+
+[node name="Banana6" parent="Frutas" instance=ExtResource( 11 )]
+position = Vector2( 3376, -280 )
+
+[node name="Apple15" parent="Frutas" instance=ExtResource( 13 )]
+position = Vector2( 3720, -176 )
+scale = Vector2( 2, 2 )
+
+[node name="Banana7" parent="Frutas" instance=ExtResource( 11 )]
+position = Vector2( 3904, -344 )
+
+[node name="Apple16" parent="Frutas" instance=ExtResource( 13 )]
+position = Vector2( 3904, -392 )
+scale = Vector2( 2, 2 )
+
+[node name="Apple17" parent="Frutas" instance=ExtResource( 13 )]
+position = Vector2( 4136, -168 )
+scale = Vector2( 2, 2 )
+
+[node name="Apple18" parent="Frutas" instance=ExtResource( 13 )]
+position = Vector2( 4168, -136 )
 scale = Vector2( 2, 2 )
 
 [node name="Interfaz" parent="." instance=ExtResource( 12 )]
