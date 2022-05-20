@@ -1,6 +1,6 @@
 extends Node
 
-const SAVEFILE = "res://Guardados/SAVEFILE.save"
+const SAVEFILE = "user://save"
 
 var game_data = {}
 
@@ -13,6 +13,7 @@ func load_data():
 		game_data = {
 			"fullscreen_on": false,
 			"brightness": 1,
+			"music_vol": -10,
 		}
 		save_data()
 	file.open(SAVEFILE, File.READ)
