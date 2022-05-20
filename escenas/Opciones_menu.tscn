@@ -1,11 +1,17 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Font/fuente_menu.tres" type="DynamicFont" id=1]
 [ext_resource path="res://Estilos/BotonNormal.tres" type="StyleBox" id=2]
 [ext_resource path="res://scripts/Opciones_menu.gd" type="Script" id=3]
+[ext_resource path="res://Font/Kenney Pixel.ttf" type="DynamicFontData" id=4]
+
+[sub_resource type="DynamicFont" id=1]
+size = 130
+outline_size = 4
+outline_color = Color( 0.34902, 0.623529, 0.290196, 1 )
+font_data = ExtResource( 4 )
 
 [node name="Opciones" type="Popup"]
-visible = true
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
@@ -28,7 +34,7 @@ margin_left = -770.0
 margin_top = -427.0
 margin_right = 770.0
 margin_bottom = 427.0
-color = Color( 0.588235, 0.917647, 0.454902, 0.670588 )
+color = Color( 0.388235, 0.407843, 0.380392, 0.670588 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -92,5 +98,27 @@ max_value = 2.0
 step = 0.1
 value = 1.0
 
+[node name="Musica" type="Label" parent="MarginContainer/Grid"]
+margin_top = 244.0
+margin_right = 707.0
+margin_bottom = 343.0
+custom_fonts/font = SubResource( 1 )
+text = "Volumen musica"
+
+[node name="Barra_musica" type="HSlider" parent="MarginContainer/Grid"]
+margin_left = 1044.0
+margin_top = 244.0
+margin_right = 1444.0
+margin_bottom = 343.0
+rect_min_size = Vector2( 400, 0 )
+size_flags_horizontal = 10
+size_flags_vertical = 1
+custom_styles/slider = ExtResource( 2 )
+min_value = -50.0
+max_value = 0.0
+value = -15.0
+rounded = true
+
 [connection signal="item_selected" from="MarginContainer/Grid/Opciones_pantalla" to="." method="_on_Opciones_pantalla_item_selected"]
 [connection signal="value_changed" from="MarginContainer/Grid/Barra_brillo" to="." method="_on_Barra_brillo_value_changed"]
+[connection signal="value_changed" from="MarginContainer/Grid/Barra_musica" to="." method="_on_Barra_musica_value_changed"]
