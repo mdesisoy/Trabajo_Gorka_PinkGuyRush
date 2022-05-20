@@ -3,7 +3,7 @@
 [ext_resource path="res://Font/fuente_menu.tres" type="DynamicFont" id=1]
 [ext_resource path="res://Font/Kenney Pixel.ttf" type="DynamicFontData" id=2]
 [ext_resource path="res://escenas/Fondo_movimiento.tscn" type="PackedScene" id=3]
-[ext_resource path="res://Assets/Free/Items/Fruits/Cherries.png" type="Texture" id=4]
+[ext_resource path="res://Assets/Logo/LogoPinkGuy.png" type="Texture" id=4]
 [ext_resource path="res://scripts/BotonesMenu.gd" type="Script" id=5]
 [ext_resource path="res://escenas/Audio.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Assets/Free/Menu/Buttons/music.png" type="Texture" id=7]
@@ -35,24 +35,24 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -272.0
-margin_top = -218.5
-margin_right = 272.0
-margin_bottom = 218.5
+margin_left = -755.5
+margin_top = -272.5
+margin_right = 755.5
+margin_bottom = 272.5
 custom_constants/separation = 50
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Logo" type="TextureRect" parent="VBoxMenu"]
-margin_right = 544.0
-margin_bottom = 32.0
+margin_right = 1511.0
+margin_bottom = 140.0
 texture = ExtResource( 4 )
 
 [node name="VBoxBotones" type="VBoxContainer" parent="VBoxMenu"]
-margin_top = 82.0
-margin_right = 544.0
-margin_bottom = 437.0
+margin_top = 190.0
+margin_right = 1511.0
+margin_bottom = 545.0
 custom_constants/separation = 20
 alignment = 1
 __meta__ = {
@@ -60,7 +60,7 @@ __meta__ = {
 }
 
 [node name="Jugar" type="Button" parent="VBoxMenu/VBoxBotones"]
-margin_right = 544.0
+margin_right = 1511.0
 margin_bottom = 105.0
 custom_colors/font_color_hover = Color( 0.184314, 0.407843, 0.239216, 1 )
 custom_colors/font_color_pressed = Color( 0.196078, 0.12549, 0.12549, 1 )
@@ -70,7 +70,7 @@ flat = true
 
 [node name="Opc" type="Button" parent="VBoxMenu/VBoxBotones"]
 margin_top = 125.0
-margin_right = 544.0
+margin_right = 1511.0
 margin_bottom = 230.0
 custom_colors/font_color_hover = Color( 0.184314, 0.407843, 0.239216, 1 )
 custom_colors/font_color_pressed = Color( 0.196078, 0.12549, 0.12549, 1 )
@@ -80,7 +80,7 @@ flat = true
 
 [node name="Salir" type="Button" parent="VBoxMenu/VBoxBotones"]
 margin_top = 250.0
-margin_right = 544.0
+margin_right = 1511.0
 margin_bottom = 355.0
 custom_colors/font_color_hover = Color( 0.184314, 0.407843, 0.239216, 1 )
 custom_colors/font_color_pressed = Color( 0.196078, 0.12549, 0.12549, 1 )
@@ -89,9 +89,6 @@ text = "Salir"
 flat = true
 
 [node name="ParallaxBackground" parent="." instance=ExtResource( 3 )]
-
-[node name="Audio" parent="." groups=["bgm"] instance=ExtResource( 6 )]
-volume_db = -12.235
 
 [node name="HBoxContainer" type="HBoxContainer" parent="."]
 margin_left = 1800.0
@@ -111,6 +108,8 @@ texture_normal = ExtResource( 7 )
 texture_pressed = ExtResource( 8 )
 
 [node name="Opciones" parent="." instance=ExtResource( 9 )]
+
+[node name="Audio" parent="." instance=ExtResource( 6 )]
 
 [connection signal="pressed" from="VBoxMenu/VBoxBotones/Jugar" to="." method="_on_Jugar_pressed"]
 [connection signal="pressed" from="VBoxMenu/VBoxBotones/Opc" to="." method="_on_Opciones_pressed"]
