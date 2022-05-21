@@ -1,6 +1,6 @@
 extends KinematicBody2D
 
-onready var player = get_node("/root/Main/Player")
+onready var player = get_node("/root/"+str(get_tree().get_current_scene().get_name())+"/Player")
 var distance2player
 
 var preBola = preload ("res://final/assets/Cañon/bola.tscn")

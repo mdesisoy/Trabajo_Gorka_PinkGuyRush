@@ -15,8 +15,12 @@ _global_script_class_icons={
 [application]
 
 config/name="Proyecto-prueba"
-run/main_scene="res://final/scenes/Main.tscn"
+run/main_scene="res://final/scenes/Main0.tscn"
 config/icon="res://icon.png"
+
+[autoload]
+
+Gvars="*res://Gvars.gd"
 
 [display]
 
