@@ -10,8 +10,10 @@ func _ready():
 func _physics_process(delta):
 	if is_on_wall():
 		direction=direction*-1
-		$AnimatedSprite.flip_h=not $AnimatedSprite.flip_h
-		
+		scale.x=-scale.x
+	if not $floor_checker.is_colliding():
+		direction=direction*-1
+		scale.x=-scale.x
 	movement.y+=20
 	movement.x=speed*direction
 	movement=move_and_slide(movement,Vector2(0,-1))

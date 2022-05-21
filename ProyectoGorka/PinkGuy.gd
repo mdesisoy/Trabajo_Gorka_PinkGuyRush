@@ -6,7 +6,7 @@ var is_wallsliding=false
 var jump_count=0
 var Apple_count=0;
 var Banana_count=0;
-const SPEED=200
+var SPEED=200
 const GRAVITY=9
 const JUMPFORCE=-230
 const FLOOR=Vector2(0,-1)
@@ -78,11 +78,17 @@ func ouch(var enemyx):
 	$AnimatedSprite.visible=false
 	$Sprite2.visible=true
 	$Animaciones.play("Die")
-	if movement.x<enemyx:
-		movement.x=-300
-	elif movement.x>enemyx:
-		movement.x=300
-	$Timer.start();
+	movement.x=0
+	movement.y=0
+	SPEED=0
+	if position.x<enemyx:
+		movement.x+=-300
+		$Sprite2.flip_h=false
+	elif position.x>enemyx:
+		movement.x+=300
+		$Sprite2.flip_h=true
+	$Timer.start()
 func rebote(var y):
 	movement.y+=400
-	
+func _on_Timer_timeout():
+	get_tree().change_scene("res://Test.tscn")
