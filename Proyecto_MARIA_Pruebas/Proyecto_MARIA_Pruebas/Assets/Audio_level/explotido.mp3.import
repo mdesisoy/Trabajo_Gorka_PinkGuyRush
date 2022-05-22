@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/explotido.mp3-fdf1a9029f08496e8e34bbb7f9b8d1ca.mp3str"
+
+[deps]
+
+source_file="res://Assets/Audio_level/explotido.mp3"
+dest_files=[ "res://.import/explotido.mp3-fdf1a9029f08496e8e34bbb7f9b8d1ca.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
