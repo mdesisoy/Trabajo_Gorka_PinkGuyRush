@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Assets/Audio/Level2.mp3" type="AudioStream" id=1]
+[ext_resource path="res://scripts/MusicaLevel2.gd" type="Script" id=2]
+
+[node name="MusicaLevel2" type="Node"]
+script = ExtResource( 2 )
+
+[node name="Level2" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 1 )
