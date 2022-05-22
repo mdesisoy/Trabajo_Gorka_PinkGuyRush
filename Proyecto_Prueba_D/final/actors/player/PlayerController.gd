@@ -22,10 +22,10 @@ func _ready() -> void:
 
 func _physics_process(_delta) -> void:
 	motion.y += GRAVITY
-	
 	_get_input()
-	
 	motion = move_and_slide(motion, UP)
+	if(self.position.y >= 700):
+		get_tree().reload_current_scene()
 
 func _get_input() -> void:
 	if Input.is_action_pressed("ui_right"):

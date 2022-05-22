@@ -1,8 +1,14 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://final/assets/generador de bolas/pincho.png" type="Texture" id=1]
 [ext_resource path="res://final/assets/generador de bolas/pincho.gd" type="Script" id=2]
+[ext_resource path="res://final/assets/light.png" type="Texture" id=3]
 
+[sub_resource type="CircleShape2D" id=12]
+radius = 14.0357
+
+[sub_resource type="CircleShape2D" id=11]
+radius = 16.0312
 
 [sub_resource type="AtlasTexture" id=1]
 flags = 4
@@ -52,41 +58,30 @@ animations = [ {
 "speed": 15.0
 } ]
 
-[sub_resource type="CircleShape2D" id=12]
-radius = 16.0
-
-[sub_resource type="CircleShape2D" id=11]
-radius = 16.2788
-
 [node name="pincho" type="Node2D"]
 
 [node name="pincho" type="KinematicBody2D" parent="."]
 script = ExtResource( 2 )
 
-[node name="AnimatedSprite" type="AnimatedSprite" parent="pincho"]
-frames = SubResource( 9 )
-animation = "move"
-frame = 4
-playing = true
-
 [node name="CollisionShape2D" type="CollisionShape2D" parent="pincho"]
 shape = SubResource( 12 )
 
-[node name="leftRay" type="RayCast2D" parent="pincho"]
-enabled = true
-cast_to = Vector2( -18, 0 )
-collision_mask = 4
-
-[node name="rightRay" type="RayCast2D" parent="pincho"]
-enabled = true
-cast_to = Vector2( 18, 0 )
-collision_mask = 4
-
 [node name="Area2D" type="Area2D" parent="pincho"]
-collision_layer = 4
-collision_mask = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="pincho/Area2D"]
 shape = SubResource( 11 )
 
-[connection signal="area_entered" from="pincho/Area2D" to="pincho" method="_on_Area2D_area_entered"]
+[node name="AnimatedSprite" type="AnimatedSprite" parent="pincho"]
+frames = SubResource( 9 )
+animation = "move"
+frame = 6
+playing = true
+
+[node name="Light2D" type="Light2D" parent="pincho"]
+position = Vector2( 0, -5.96046e-08 )
+scale = Vector2( 0.0131836, 0.0131836 )
+texture = ExtResource( 3 )
+color = Color( 1, 0, 0, 1 )
+energy = 2.0
+
+[connection signal="body_entered" from="pincho/Area2D" to="pincho" method="_on_Area2D_body_entered"]
