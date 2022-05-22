@@ -1,7 +1,7 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://final/assets/Plataforma/plataforma.png" type="Texture" id=1]
-
+[ext_resource path="res://final/assets/Plataforma/plataforma.gd" type="Script" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 151, 40 )
@@ -62,9 +62,13 @@ animations = [ {
 "speed": 15.0
 } ]
 
+[sub_resource type="RectangleShape2D" id=9]
+extents = Vector2( 107, 15.5 )
+
 [node name="Node2D" type="Node2D"]
 
 [node name="plataforma" type="KinematicBody2D" parent="."]
+script = ExtResource( 2 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="plataforma"]
 position = Vector2( 152, 40 )
@@ -81,3 +85,11 @@ scale = Vector2( 9.60938, 8.1 )
 frames = SubResource( 8 )
 frame = 1
 playing = true
+
+[node name="deadBox" type="Area2D" parent="plataforma"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="plataforma/deadBox"]
+position = Vector2( 151, 77 )
+shape = SubResource( 9 )
+
+[connection signal="body_entered" from="plataforma/deadBox" to="plataforma" method="_on_deadBox_body_entered"]

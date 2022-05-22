@@ -78,8 +78,3 @@ func rojo():
 	
 func verde():
 	$AnimationPlayer.play("verde")
-
-
-func _on_Hurtbox_body_entered(body):
-	if body.is_in_group("bd"):
-		print("holi")
