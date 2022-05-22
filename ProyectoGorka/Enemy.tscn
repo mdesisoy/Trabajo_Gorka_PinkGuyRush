@@ -205,7 +205,7 @@ position = Vector2( -6, 4 )
 scale = Vector2( 0.750003, 0.735293 )
 frames = SubResource( 33 )
 animation = "Walk"
-frame = 1
+frame = 2
 playing = true
 
 [node name="floor_checker" type="RayCast2D" parent="."]

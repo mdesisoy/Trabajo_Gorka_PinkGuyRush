@@ -8,7 +8,7 @@ var Apple_count=0;
 var Banana_count=0;
 var SPEED=200
 const GRAVITY=9
-const JUMPFORCE=-230
+var JUMPFORCE=-230
 const FLOOR=Vector2(0,-1)
 func _physics_process(delta):
 	if Input.is_action_pressed("Right"):
@@ -81,6 +81,7 @@ func ouch(var enemyx):
 	movement.x=0
 	movement.y=0
 	SPEED=0
+	JUMPFORCE=0
 	if position.x<enemyx:
 		movement.x+=-300
 		$Sprite2.flip_h=false
