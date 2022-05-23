@@ -5,13 +5,14 @@ var movement= Vector2(0,0)
 var on_ground= false
 var is_wallsliding=false
 var jump_count=0
+export (int) var LIMITE_ABAJO = 500 
 const SPEED=150
 const GRAVITY=9
 const JUMPFORCE=-230
 const FLOOR=Vector2(0,-1)
 
 func _physics_process(delta):
-	if get_position().y > 500:
+	if get_position().y > LIMITE_ABAJO:
 		get_tree().reload_current_scene()
 	if Input.is_action_pressed("Right"):
 		movement.x=SPEED

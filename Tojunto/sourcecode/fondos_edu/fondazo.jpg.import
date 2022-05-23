@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/backgroundnew.jpg-fa8b587ae8212bf23cef87bcad4baa1d.stex"
+path="res://.import/fondazo.jpg-e0f0bb178cb1abc9cc20e777c3cb1219.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sourcecode/fondos_edu/backgroundnew.jpg"
-dest_files=[ "res://.import/backgroundnew.jpg-fa8b587ae8212bf23cef87bcad4baa1d.stex" ]
+source_file="res://sourcecode/fondos_edu/fondazo.jpg"
+dest_files=[ "res://.import/fondazo.jpg-e0f0bb178cb1abc9cc20e777c3cb1219.stex" ]
 
 [params]
 
@@ -20,7 +20,7 @@ compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=false
+flags/filter=true
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2
