@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=20 format=2]
 
 [ext_resource path="res://sourcecode/Levels/Level_2.gd" type="Script" id=1]
 [ext_resource path="res://sourcecode/Tilesets/tilesetLevel2.tres" type="TileSet" id=2]
@@ -16,6 +16,9 @@
 [ext_resource path="res://sourcecode/Actors/Collectables/Banana.tscn" type="PackedScene" id=14]
 [ext_resource path="res://sourcecode/Actors/Collectables/Apple.tscn" type="PackedScene" id=15]
 [ext_resource path="res://sourcecode/Enemies/Chicken.tscn" type="PackedScene" id=16]
+[ext_resource path="res://escenas/GUI.tscn" type="PackedScene" id=17]
+[ext_resource path="res://Portal/portal.tscn" type="PackedScene" id=18]
+[ext_resource path="res://escenas/MusicaLevel2.tscn" type="PackedScene" id=19]
 
 [node name="Level_2" type="Node2D"]
 script = ExtResource( 1 )
@@ -261,7 +264,15 @@ position = Vector2( 3704, -92 )
 scale = Vector2( 0.1, 0.3 )
 
 [node name="End_Point" parent="." instance=ExtResource( 12 )]
-position = Vector2( 4568, -224 )
+position = Vector2( 4470, -224 )
+
+[node name="portal" parent="." instance=ExtResource( 18 )]
+position = Vector2( 4471, -456 )
+escena = "creditos"
 
 [node name="Player" parent="." groups=["player"] instance=ExtResource( 11 )]
-position = Vector2( 32, -84 )
+position = Vector2( 34, -102 )
+
+[node name="GUI" parent="." instance=ExtResource( 17 )]
+
+[node name="MusicaLevel2" parent="." instance=ExtResource( 19 )]

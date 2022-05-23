@@ -136,3 +136,5 @@ text = "Nivel 4"
 visible = false
 
 [connection signal="pressed" from="HBoxContainer/VOLVER" to="." method="_on_VOLVER_pressed"]
+[connection signal="pressed" from="VBoxMenu/VBoxBotones/Nivel1" to="." method="_on_Nivel1_pressed"]
+[connection signal="pressed" from="VBoxMenu/VBoxBotones/Nivel2" to="." method="_on_Nivel2_pressed"]

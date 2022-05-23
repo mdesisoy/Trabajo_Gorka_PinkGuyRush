@@ -19,14 +19,11 @@ func _physics_process(delta):
 	movement=move_and_slide(movement,Vector2(0,-1))
 	
 func _on_top_checker_body_entered(body):
-	if killed==false:
-		speed=0
-		$AnimatedSprite.visible=false
-		$Sprite.visible=true
-		$AnimationPlayer.play("Die")
-		$muerteFX.play(0)
-		killed=true
-		body.rebote()
+	speed=0
+	$AnimatedSprite.visible=false
+	$Sprite.visible=true
+	$AnimationPlayer.play("Die")
+	killed=true
 func _on_AnimationPlayer_animation_finished(anim_name):
 	queue_free()
 func _on_side_checker_body_entered(body):

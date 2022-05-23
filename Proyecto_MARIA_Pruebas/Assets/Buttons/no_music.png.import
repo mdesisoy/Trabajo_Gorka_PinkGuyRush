@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/no_music.png-1c396195e6fef4419b58702f3be68d33.stex"
+path="res://.import/no_music.png-1081df1c54462479796aae8e46f74bc8.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Free/Menu/Buttons/no_music.png"
-dest_files=[ "res://.import/no_music.png-1c396195e6fef4419b58702f3be68d33.stex" ]
+source_file="res://Assets/Buttons/no_music.png"
+dest_files=[ "res://.import/no_music.png-1081df1c54462479796aae8e46f74bc8.stex" ]
 
 [params]
 
