@@ -12,11 +12,12 @@ func _on_Salir_pressed():
 	get_tree().quit()
 
 func _on_Opciones_pressed():
-	get_tree().change_scene("res://escenas/Opciones_menu.tscn")
+	opciones.popup_centered()
 
 
 func _on_Jugar_pressed():
 	get_tree().change_scene("res://sourcecode/Levels/Level_1.tscn")
+
 
 func _on_TextureButton_button_down():
 	music_on = !music_on

@@ -93,6 +93,9 @@ margin_top = 27.0
 margin_right = 2312.0
 margin_bottom = 539.0
 rect_scale = Vector2( 0.16971, 0.16079 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="TextureButton" type="TextureButton" parent="HBoxContainer"]
 margin_right = 512.0
