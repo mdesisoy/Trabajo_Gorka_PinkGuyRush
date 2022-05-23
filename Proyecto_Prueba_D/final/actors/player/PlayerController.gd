@@ -25,7 +25,8 @@ func _physics_process(_delta) -> void:
 	_get_input()
 	motion = move_and_slide(motion, UP)
 	if(self.position.y >= 700):
-		get_tree().reload_current_scene()
+		health = 0
+		vida_cero()
 
 func _get_input() -> void:
 	if Input.is_action_pressed("ui_right"):
@@ -71,7 +72,12 @@ func _remember_jump_time() -> void:
 
 func vida_cero():
 	if health <= 0:
-		get_tree().reload_current_scene()
+		Gvars.vidas -= 1
+		if Gvars.vidas > 0:
+			get_tree().reload_current_scene()
+		else:
+			get_tree().change_scene("res://final/scenes/Level_1.tscn")
+			Gvars.vidas = 3
 
 func rojo():
 	$AnimationPlayer.play("rojo")

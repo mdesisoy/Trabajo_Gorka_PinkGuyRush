@@ -20,7 +20,7 @@ config/icon="res://icon.png"
 
 [autoload]
 
-Gvars="*res://Gvars.gd"
+Gvars="*res://final/scenes/Gvars.gd"
 
 [display]
 

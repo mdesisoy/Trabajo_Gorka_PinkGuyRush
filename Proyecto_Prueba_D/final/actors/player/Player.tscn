@@ -159,5 +159,3 @@ shape = SubResource( 16 )
 anims/RESET = SubResource( 17 )
 anims/rojo = SubResource( 18 )
 anims/verde = SubResource( 19 )
-
-[connection signal="body_entered" from="Hurtbox" to="." method="_on_Hurtbox_body_entered"]

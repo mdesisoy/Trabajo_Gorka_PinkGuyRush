@@ -79,7 +79,7 @@ anims/movimiento = SubResource( 3 )
 position = Vector2( 152.75, 43 )
 scale = Vector2( 9.70313, 8.4 )
 frames = SubResource( 8 )
-frame = 2
+frame = 3
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="plataforma"]

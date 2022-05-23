@@ -40,7 +40,7 @@ scale = Vector2( 2.23438, 1.40625 )
 texture = ExtResource( 3 )
 
 [node name="Timer" type="Timer" parent="."]
-wait_time = 6.0
+wait_time = 4.0
 autostart = true
 
 [connection signal="timeout" from="Timer" to="KinematicBody2D" method="_on_Timer_timeout"]

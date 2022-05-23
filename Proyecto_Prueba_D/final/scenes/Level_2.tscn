@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://final/actors/player/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://final/assets/tileset/TileMap.tscn" type="PackedScene" id=2]
@@ -10,6 +10,7 @@
 [ext_resource path="res://final/assets/light.png" type="Texture" id=8]
 [ext_resource path="res://final/actors/player/Light2D.gd" type="Script" id=9]
 [ext_resource path="res://final/assets/Moneda/Moneda.tscn" type="PackedScene" id=10]
+[ext_resource path="res://final/actors/enemy/Enemy.tscn" type="PackedScene" id=11]
 
 [node name="Main2" type="Node2D"]
 script = ExtResource( 5 )
@@ -32,30 +33,35 @@ texture = ExtResource( 8 )
 script = ExtResource( 9 )
 
 [node name="cañon" parent="." instance=ExtResource( 4 )]
-position = Vector2( 432, 375 )
+position = Vector2( 467, 373 )
 
 [node name="UI" parent="." instance=ExtResource( 6 )]
 
+[node name="Enemy" parent="." instance=ExtResource( 11 )]
+position = Vector2( 513, 570 )
+damage = 20
+vida = 100
+
 [node name="Pincho" parent="." instance=ExtResource( 7 )]
-position = Vector2( 306, 593 )
+position = Vector2( 303, 593 )
 
 [node name="Pincho2" parent="." instance=ExtResource( 7 )]
-position = Vector2( 370, 593 )
+position = Vector2( 367, 593 )
 
 [node name="Pincho3" parent="." instance=ExtResource( 7 )]
-position = Vector2( 338, 593 )
+position = Vector2( 335, 593 )
 
 [node name="Pincho4" parent="." instance=ExtResource( 7 )]
-position = Vector2( 274, 593 )
+position = Vector2( 271, 593 )
 
 [node name="Pincho5" parent="." instance=ExtResource( 7 )]
-position = Vector2( 210, 593 )
+position = Vector2( 207, 593 )
 
 [node name="Pincho6" parent="." instance=ExtResource( 7 )]
-position = Vector2( 242, 593 )
+position = Vector2( 239, 593 )
 
 [node name="Pincho7" parent="." instance=ExtResource( 7 )]
-position = Vector2( 402, 593 )
+position = Vector2( 399, 593 )
 
 [node name="Moneda" parent="." instance=ExtResource( 10 )]
 position = Vector2( 602, 517 )
