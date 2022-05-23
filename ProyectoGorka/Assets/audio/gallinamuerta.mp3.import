@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/gallinamuerta.mp3-887de57bec750dd72ae55f27736fd263.mp3str"
+
+[deps]
+
+source_file="res://Assets/audio/gallinamuerta.mp3"
+dest_files=[ "res://.import/gallinamuerta.mp3-887de57bec750dd72ae55f27736fd263.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
