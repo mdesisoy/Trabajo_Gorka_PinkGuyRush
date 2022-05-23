@@ -1,4 +1,4 @@
-[gd_scene load_steps=53 format=2]
+[gd_scene load_steps=54 format=2]
 
 [ext_resource path="res://Assets/PackInicial/Main Characters/Pink Man/Hit (32x32).png" type="Texture" id=1]
 [ext_resource path="res://Assets/PackInicial/Main Characters/Pink Man/Idle (32x32).png" type="Texture" id=2]
@@ -8,6 +8,7 @@
 [ext_resource path="res://Assets/PackInicial/Main Characters/Pink Man/Wall Jump (32x32).png" type="Texture" id=6]
 [ext_resource path="res://sourcecode/Actors/Player/PinkGuy.gd" type="Script" id=7]
 [ext_resource path="res://Assets/PackInicial/Main Characters/Pink Man/Double Jump (32x32).png" type="Texture" id=8]
+[ext_resource path="res://Assets/Audio_level/Jump.mp3" type="AudioStream" id=9]
 
 [sub_resource type="Animation" id=46]
 resource_name = "Double"
@@ -141,8 +142,8 @@ region = Rect2( 96, 0, 32, 32 )
 atlas = ExtResource( 6 )
 region = Rect2( 128, 0, 32, 32 )
 
-[sub_resource type="AtlasTexture" id=20]
-atlas = ExtResource( 4 )
+[sub_resource type="AtlasTexture" id=26]
+atlas = ExtResource( 3 )
 region = Rect2( 0, 0, 32, 32 )
 
 [sub_resource type="AtlasTexture" id=13]
@@ -173,8 +174,8 @@ region = Rect2( 32, 0, 32, 32 )
 atlas = ExtResource( 1 )
 region = Rect2( 0, 0, 32, 32 )
 
-[sub_resource type="AtlasTexture" id=26]
-atlas = ExtResource( 3 )
+[sub_resource type="AtlasTexture" id=20]
+atlas = ExtResource( 4 )
 region = Rect2( 0, 0, 32, 32 )
 
 [sub_resource type="SpriteFrames" id=39]
@@ -194,9 +195,9 @@ animations = [ {
 "name": "Wall",
 "speed": 5.0
 }, {
-"frames": [ SubResource( 20 ) ],
+"frames": [ SubResource( 26 ) ],
 "loop": true,
-"name": "jump",
+"name": "Fall",
 "speed": 5.0
 }, {
 "frames": [ SubResource( 13 ), SubResource( 14 ), SubResource( 15 ), SubResource( 16 ), SubResource( 17 ), SubResource( 18 ), SubResource( 19 ) ],
@@ -204,9 +205,9 @@ animations = [ {
 "name": "Damaged",
 "speed": 5.0
 }, {
-"frames": [ SubResource( 26 ) ],
+"frames": [ SubResource( 20 ) ],
 "loop": true,
-"name": "Fall",
+"name": "jump",
 "speed": 5.0
 } ]
 
@@ -291,7 +292,7 @@ shape = SubResource( 1 )
 position = Vector2( 0, -4 )
 frames = SubResource( 39 )
 animation = "Idle"
-frame = 2
+frame = 6
 playing = true
 
 [node name="Sprite" type="Sprite" parent="."]
@@ -305,8 +306,8 @@ z_index = -60
 current = true
 zoom = Vector2( 0.24, 0.24 )
 limit_left = 0
-limit_top = -384
-limit_right = 4576
+limit_top = -432
+limit_right = 4592
 limit_bottom = 0
 limit_smoothed = true
 smoothing_enabled = true
@@ -318,3 +319,24 @@ anims/RESET = SubResource( 47 )
 anims/amarillo = SubResource( 49 )
 anims/rojo = SubResource( 48 )
 anims/verde = SubResource( 50 )
+
+[node name="RightWall" type="RayCast2D" parent="."]
+position = Vector2( 2, 1 )
+rotation = -1.5708
+enabled = true
+cast_to = Vector2( 0, 14 )
+collision_mask = 2
+
+[node name="LeftWall" type="RayCast2D" parent="."]
+position = Vector2( 2, 1 )
+rotation = 1.5708
+enabled = true
+cast_to = Vector2( 0, 14 )
+collision_mask = 2
+
+[node name="JumpFX" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 9 )
+volume_db = -2.0
+pitch_scale = 2.25
+max_distance = 1000.0
+attenuation = 3.13834
