@@ -198,4 +198,4 @@ scale = Vector2( 1, 1 )
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
 
 [node name="GeneradorPincho" parent="." instance=ExtResource( 11 )]
-position = Vector2( 893, 65 )
+position = Vector2( 897, 440 )

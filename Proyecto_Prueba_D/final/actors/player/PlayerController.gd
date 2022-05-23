@@ -63,7 +63,6 @@ func _get_input() -> void:
 
 
 func _coyote_time() -> void:
-	yield(get_tree().create_timer(.1), "timeout")
 	_is_able_to_jump = false
 
 func _remember_jump_time() -> void:
