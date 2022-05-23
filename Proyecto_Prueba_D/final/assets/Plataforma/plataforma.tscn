@@ -65,7 +65,7 @@ extents = Vector2( 155, 21.5 )
 [sub_resource type="RectangleShape2D" id=9]
 extents = Vector2( 107, 16.5 )
 
-[node name="Node2D" type="Node2D"]
+[node name="plataforma" type="Node2D"]
 
 [node name="plataforma" type="KinematicBody2D" parent="."]
 script = ExtResource( 2 )
