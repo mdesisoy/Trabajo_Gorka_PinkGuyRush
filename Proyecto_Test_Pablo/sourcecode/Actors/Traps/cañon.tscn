@@ -1,8 +1,8 @@
 [gd_scene load_steps=12 format=2]
 
-[ext_resource path="res://cañon.gd" type="Script" id=1]
-[ext_resource path="res://final/assets/cañon.png" type="Texture" id=2]
-[ext_resource path="res://final/assets/piedra.png" type="Texture" id=3]
+[ext_resource path="res://final/assets/Cañon/cañon.gd" type="Script" id=1]
+[ext_resource path="res://final/assets/Cañon/cañon.png" type="Texture" id=2]
+[ext_resource path="res://final/assets/Cañon/piedra.png" type="Texture" id=3]
 [ext_resource path="res://final/assets/light.png" type="Texture" id=4]
 
 [sub_resource type="CircleShape2D" id=1]

@@ -2,15 +2,24 @@
 
 importer="texture"
 type="StreamTexture"
+<<<<<<<< HEAD:Proyecto_Prueba_D/final/assets/Cañon/cañon.png.import
+path="res://.import/cañon.png-01d880e8e7737b73848db8279a5c0d95.stex"
+========
 path="res://.import/Bullet.png-0f0f08c722765160fbcea915932bedce.stex"
+>>>>>>>> main:Proyecto_Test_Pablo/assets/Enemies/Bee/Bullet.png.import
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
+<<<<<<<< HEAD:Proyecto_Prueba_D/final/assets/Cañon/cañon.png.import
+source_file="res://final/assets/Cañon/cañon.png"
+dest_files=[ "res://.import/cañon.png-01d880e8e7737b73848db8279a5c0d95.stex" ]
+========
 source_file="res://assets/Enemies/Bee/Bullet.png"
 dest_files=[ "res://.import/Bullet.png-0f0f08c722765160fbcea915932bedce.stex" ]
+>>>>>>>> main:Proyecto_Test_Pablo/assets/Enemies/Bee/Bullet.png.import
 
 [params]
 
