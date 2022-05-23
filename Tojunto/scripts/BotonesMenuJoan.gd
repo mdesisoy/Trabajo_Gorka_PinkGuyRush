@@ -4,19 +4,20 @@ var music_on = true
 onready var opciones = $Opciones
 
 func _ready():
-	Audio._play_music()
+	$miusic.play(0)
 	MusicaLevel1._stop_music()
 	MusicaLevel2._stop_music()
+	Audio._stop_music()
 
 func _on_Salir_pressed():
 	get_tree().quit()
 
 func _on_Opciones_pressed():
-	get_tree().change_scene("res://escenas/Opciones_menu.tscn")
+	get_tree().change_scene("res://escenas/Menu.tscn")
 
 
 func _on_Jugar_pressed():
-	get_tree().change_scene("res://sourcecode/Levels/Level_1.tscn")
+	get_tree().change_scene("res://escenas/Menu.tscn")
 
 func _on_TextureButton_button_down():
 	music_on = !music_on
@@ -24,6 +25,3 @@ func _on_TextureButton_button_down():
 		Audio._play_music()
 	else:
 		Audio._stop_music()
-
-func _on_Godmode_pressed():
-	get_tree().change_scene("res://escenas/Menujoan.tscn")
