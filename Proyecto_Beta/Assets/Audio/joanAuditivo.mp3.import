@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/joanAuditivo.mp3-9f251b0a0b581e98a19a260ab2457181.mp3str"
+
+[deps]
+
+source_file="res://Assets/Audio/joanAuditivo.mp3"
+dest_files=[ "res://.import/joanAuditivo.mp3-9f251b0a0b581e98a19a260ab2457181.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
