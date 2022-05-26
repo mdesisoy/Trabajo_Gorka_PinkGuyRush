@@ -14,7 +14,8 @@ var salto_infinito_caca = 0
 
 func _physics_process(delta):
 	if get_position().y > LIMITE_ABAJO:
-		get_tree().reload_current_scene()
+		health = 0
+		vida_cero()
 	if Input.is_action_pressed("Right"):
 		movement.x=SPEED
 		$AnimatedSprite.play("Run")
@@ -98,4 +99,9 @@ func rebote():
 
 func vida_cero():
 	if health <= 0:
-		get_tree().reload_current_scene()
+		Gvars.vidas -= 1
+		if Gvars.vidas == 0:
+			get_tree().change_scene("res://sourcecode/Levels/Level_1.tscn")
+			Gvars.vidas = 6
+		else:
+			get_tree().reload_current_scene()

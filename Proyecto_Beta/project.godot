@@ -29,6 +29,7 @@ MusicaLevel1="*res://escenas/MusicaLevel1.tscn"
 MusicaLevel2="*res://escenas/MusicaLevel2.tscn"
 MusicaLevel3="*res://escenas/MusicaLevel3.tscn"
 MusicaLevel4="*res://escenas/MusicaLevel4.tscn"
+Gvars="*res://sourcecode/Scripts/Gvars.gd"
 
 [display]
 

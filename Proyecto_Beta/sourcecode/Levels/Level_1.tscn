@@ -248,7 +248,7 @@ player_node = NodePath("../Player")
 [node name="pinchotes" type="Node2D" parent="."]
 
 [node name="Salud" parent="." instance=ExtResource( 21 )]
-position = Vector2( 291, -80 )
+position = Vector2( 2140, -217 )
 scale = Vector2( 0.6, 0.6 )
 
 [node name="Traps" type="Node2D" parent="."]

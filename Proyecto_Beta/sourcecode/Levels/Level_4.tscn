@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=2]
+[gd_scene load_steps=19 format=2]
 
 [ext_resource path="res://sourcecode/fondos_edu/burrote.jpg" type="Texture" id=1]
 [ext_resource path="res://sourcecode/Actors/Ambient/juan.tscn" type="PackedScene" id=2]
@@ -17,6 +17,7 @@
 [ext_resource path="res://sourcecode/Actors/Collectables/Apple.tscn" type="PackedScene" id=15]
 [ext_resource path="res://sourcecode/Actors/Collectables/Banana.tscn" type="PackedScene" id=16]
 [ext_resource path="res://sourcecode/Interfaces/BarraSalud/BarraSalud.tscn" type="PackedScene" id=17]
+[ext_resource path="res://sourcecode/Actors/Traps/generador de bolas/GeneradorBola.tscn" type="PackedScene" id=18]
 
 [node name="Level_3" type="Node2D"]
 script = ExtResource( 11 )
@@ -49,7 +50,7 @@ position = Vector2( -2104.66, -68.2907 )
 position = Vector2( -546.477, -15.8003 )
 
 [node name="cañon3" parent="Cañones" instance=ExtResource( 6 )]
-position = Vector2( -1279.89, 369.999 )
+position = Vector2( -1230, 366 )
 
 [node name="cañon4" parent="Cañones" instance=ExtResource( 6 )]
 position = Vector2( -561.581, -776.45 )
@@ -61,10 +62,10 @@ position = Vector2( -933.581, -949.42 )
 position = Vector2( -1839.45, -377.834 )
 
 [node name="cañon2" parent="Cañones" instance=ExtResource( 6 )]
-position = Vector2( -1326, 92 )
+position = Vector2( -1304, 92 )
 
 [node name="cañon9" parent="Cañones" instance=ExtResource( 6 )]
-position = Vector2( -1396.82, -412.368 )
+position = Vector2( -1461, -348 )
 
 [node name="cañon" parent="Cañones" instance=ExtResource( 6 )]
 position = Vector2( -1209.38, -793.246 )
@@ -270,3 +271,14 @@ player_node = NodePath("../Player")
 
 [node name="juan" parent="." instance=ExtResource( 2 )]
 position = Vector2( 456, 296 )
+
+[node name="generador" type="Node2D" parent="."]
+
+[node name="GeneradorPincho" parent="generador" instance=ExtResource( 18 )]
+position = Vector2( -1369, -840 )
+
+[node name="GeneradorPincho2" parent="generador" instance=ExtResource( 18 )]
+position = Vector2( -996, -511 )
+
+[node name="GeneradorPincho3" parent="generador" instance=ExtResource( 18 )]
+position = Vector2( -696, -492 )

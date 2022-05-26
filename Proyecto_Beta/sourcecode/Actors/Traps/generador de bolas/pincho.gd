@@ -15,7 +15,7 @@ func _ready():
 func _physics_process(_delta):
 	motion.y += GRAVITY
 	motion = move_and_slide(motion)
-	if(position.y > 700):
+	if(position.y > 1700):
 		queue_free()
 
 

@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=2]
+[gd_scene load_steps=24 format=2]
 
 [ext_resource path="res://sourcecode/Scripts/Level_2.gd" type="Script" id=1]
 [ext_resource path="res://sourcecode/Tilesets/tilesetLevel2.tres" type="TileSet" id=2]
@@ -20,6 +20,9 @@
 [ext_resource path="res://Portal/portal.tscn" type="PackedScene" id=18]
 [ext_resource path="res://escenas/MusicaLevel2.tscn" type="PackedScene" id=19]
 [ext_resource path="res://sourcecode/Interfaces/BarraSalud/BarraSalud.tscn" type="PackedScene" id=20]
+[ext_resource path="res://sourcecode/Actors/Traps/generador de bolas/GeneradorBola.tscn" type="PackedScene" id=21]
+[ext_resource path="res://sourcecode/Actors/Traps/Pincho/Pincho.tscn" type="PackedScene" id=22]
+[ext_resource path="res://sourcecode/Actors/Ambient/Salud/Salud.tscn" type="PackedScene" id=23]
 
 [node name="Level_2" type="Node2D"]
 script = ExtResource( 1 )
@@ -281,3 +284,79 @@ position = Vector2( 34, -102 )
 
 [node name="BarraSalud" parent="." instance=ExtResource( 20 )]
 player_node = NodePath("../Player")
+
+[node name="Generadores" type="Node2D" parent="."]
+
+[node name="GeneradorPincho" parent="Generadores" instance=ExtResource( 21 )]
+position = Vector2( 3104, -407 )
+
+[node name="GeneradorPincho2" parent="Generadores" instance=ExtResource( 21 )]
+position = Vector2( 3670, -401 )
+
+[node name="GeneradorPincho3" parent="Generadores" instance=ExtResource( 21 )]
+position = Vector2( 572, -216 )
+
+[node name="Pincho" parent="Generadores" instance=ExtResource( 22 )]
+position = Vector2( 1784, -152 )
+rotation = 1.5708
+
+[node name="Pinchotes" type="Node2D" parent="."]
+
+[node name="Pincho17" parent="Pinchotes" instance=ExtResource( 22 )]
+position = Vector2( 3464, -72 )
+
+[node name="Salud" parent="Pinchotes/Pincho17" instance=ExtResource( 23 )]
+position = Vector2( -90, -91 )
+scale = Vector2( 0.6, 0.6 )
+
+[node name="Pincho" parent="Pinchotes" instance=ExtResource( 22 )]
+position = Vector2( 281, -327 )
+
+[node name="Pincho2" parent="Pinchotes" instance=ExtResource( 22 )]
+position = Vector2( 1464, -305 )
+rotation = -1.5708
+
+[node name="Pincho3" parent="Pinchotes" instance=ExtResource( 22 )]
+position = Vector2( 1464, -321 )
+rotation = -1.5708
+
+[node name="Pincho4" parent="Pinchotes" instance=ExtResource( 22 )]
+position = Vector2( 1464, -337 )
+rotation = -1.5708
+
+[node name="Pincho5" parent="Pinchotes" instance=ExtResource( 22 )]
+position = Vector2( 1865, -392 )
+
+[node name="Pincho6" parent="Pinchotes" instance=ExtResource( 22 )]
+position = Vector2( 1929, -392 )
+
+[node name="Pincho8" parent="Pinchotes" instance=ExtResource( 22 )]
+position = Vector2( 1880, -89 )
+rotation = -1.5708
+
+[node name="Pincho9" parent="Pinchotes" instance=ExtResource( 22 )]
+position = Vector2( 1880, -105 )
+rotation = -1.5708
+
+[node name="Pincho10" parent="Pinchotes" instance=ExtResource( 22 )]
+position = Vector2( 1880, -73 )
+rotation = -1.5708
+
+[node name="Pincho11" parent="Pinchotes" instance=ExtResource( 22 )]
+position = Vector2( 1784, -168 )
+rotation = 1.5708
+
+[node name="Pincho12" parent="Pinchotes" instance=ExtResource( 22 )]
+position = Vector2( 3448, -72 )
+
+[node name="Pincho13" parent="Pinchotes" instance=ExtResource( 22 )]
+position = Vector2( 2248, -440 )
+
+[node name="Pincho14" parent="Pinchotes" instance=ExtResource( 22 )]
+position = Vector2( 2185, -440 )
+
+[node name="Pincho15" parent="Pinchotes" instance=ExtResource( 22 )]
+position = Vector2( 3432, -72 )
+
+[node name="Pincho16" parent="Pinchotes" instance=ExtResource( 22 )]
+position = Vector2( 3416, -72 )
