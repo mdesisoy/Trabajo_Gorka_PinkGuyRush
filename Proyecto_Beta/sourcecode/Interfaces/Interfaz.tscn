@@ -101,5 +101,5 @@ __meta__ = {
 position = Vector2( 64, 64 )
 scale = Vector2( 4, 4 )
 frames = SubResource( 19 )
-frame = 9
+frame = 12
 playing = true

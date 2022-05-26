@@ -58,8 +58,8 @@ anims/RESET = SubResource( 2 )
 anims/giro = SubResource( 3 )
 
 [node name="Light2D" type="Light2D" parent="."]
-position = Vector2( 73, 222 )
-scale = Vector2( 0.134949, 0.125854 )
+position = Vector2( 73.5, 221 )
+scale = Vector2( 0.104492, 0.103516 )
 texture = ExtResource( 3 )
 energy = 3.75
 
