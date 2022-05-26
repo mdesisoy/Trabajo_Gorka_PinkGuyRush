@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://sourcecode/fondos_edu/burrote.jpg" type="Texture" id=1]
 [ext_resource path="res://sourcecode/fondos_edu/juanmeme.jpg" type="Texture" id=2]
@@ -16,6 +16,7 @@
 [ext_resource path="res://sourcecode/Interfaces/Interfaz.tscn" type="PackedScene" id=14]
 [ext_resource path="res://sourcecode/Actors/Collectables/Apple.tscn" type="PackedScene" id=15]
 [ext_resource path="res://sourcecode/Actors/Collectables/Banana.tscn" type="PackedScene" id=16]
+[ext_resource path="res://sourcecode/Interfaces/BarraSalud/BarraSalud.tscn" type="PackedScene" id=17]
 
 [node name="Level_3" type="Node2D"]
 script = ExtResource( 11 )
@@ -268,3 +269,6 @@ position = Vector2( 944, -1488 )
 
 [node name="Apple31" parent="Frutas" instance=ExtResource( 15 )]
 position = Vector2( 1120, -1488 )
+
+[node name="BarraSalud" parent="." instance=ExtResource( 17 )]
+player_node = NodePath("../Player")

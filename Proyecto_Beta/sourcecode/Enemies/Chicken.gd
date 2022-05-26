@@ -27,7 +27,7 @@ func _physics_process(delta):
 	movement=move_and_slide(movement,Vector2(0,-1))
 	
 func _on_top_checker_body_entered(body):
-	if killed==false:
+	if body.is_in_group("player") and killed==false:
 		speed=0
 		$AnimatedSprite.visible=false
 		$Sprite.visible=true
