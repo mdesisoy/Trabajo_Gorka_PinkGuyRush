@@ -150,6 +150,10 @@ region = Rect2( 32, 0, 32, 32 )
 atlas = ExtResource( 1 )
 region = Rect2( 0, 0, 32, 32 )
 
+[sub_resource type="AtlasTexture" id=20]
+atlas = ExtResource( 4 )
+region = Rect2( 0, 0, 32, 32 )
+
 [sub_resource type="AtlasTexture" id=21]
 atlas = ExtResource( 6 )
 region = Rect2( 0, 0, 32, 32 )
@@ -169,10 +173,6 @@ region = Rect2( 96, 0, 32, 32 )
 [sub_resource type="AtlasTexture" id=25]
 atlas = ExtResource( 6 )
 region = Rect2( 128, 0, 32, 32 )
-
-[sub_resource type="AtlasTexture" id=20]
-atlas = ExtResource( 4 )
-region = Rect2( 0, 0, 32, 32 )
 
 [sub_resource type="AtlasTexture" id=26]
 atlas = ExtResource( 3 )
@@ -195,14 +195,14 @@ animations = [ {
 "name": "Damaged",
 "speed": 5.0
 }, {
-"frames": [ SubResource( 21 ), SubResource( 22 ), SubResource( 23 ), SubResource( 24 ), SubResource( 25 ) ],
-"loop": true,
-"name": "Wall",
-"speed": 5.0
-}, {
 "frames": [ SubResource( 20 ) ],
 "loop": true,
 "name": "jump",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 21 ), SubResource( 22 ), SubResource( 23 ), SubResource( 24 ), SubResource( 25 ) ],
+"loop": true,
+"name": "Wall",
 "speed": 5.0
 }, {
 "frames": [ SubResource( 26 ) ],
@@ -277,6 +277,7 @@ tracks/0/keys = {
 [node name="KinematicBody2D" type="KinematicBody2D"]
 position = Vector2( -1, -1 )
 scale = Vector2( 0.99, 0.99 )
+collision_mask = 3
 script = ExtResource( 7 )
 __meta__ = {
 "_edit_group_": true
@@ -293,7 +294,7 @@ shape = SubResource( 1 )
 position = Vector2( 0, -4 )
 frames = SubResource( 39 )
 animation = "Idle"
-frame = 1
+frame = 6
 playing = true
 
 [node name="Sprite" type="Sprite" parent="."]
@@ -323,7 +324,7 @@ anims/verde = SubResource( 50 )
 [node name="RightWall" type="RayCast2D" parent="."]
 position = Vector2( 1.0101, 1.0101 )
 rotation = -1.5708
-scale = Vector2( 0.6, 0.6 )
+scale = Vector2( 0.7, 0.7 )
 enabled = true
 cast_to = Vector2( 0, 14 )
 collision_mask = 2
@@ -331,7 +332,7 @@ collision_mask = 2
 [node name="LeftWall" type="RayCast2D" parent="."]
 position = Vector2( 1, 1 )
 rotation = 1.5708
-scale = Vector2( 0.6, 0.6 )
+scale = Vector2( 0.7, 0.7 )
 enabled = true
 cast_to = Vector2( 0, 14 )
 collision_mask = 2
