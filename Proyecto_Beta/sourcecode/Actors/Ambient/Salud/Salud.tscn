@@ -1,0 +1,100 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://sourcecode/Actors/Ambient/Salud/Salud.gd" type="Script" id=1]
+[ext_resource path="res://sourcecode/Actors/Ambient/Salud/Salud.png" type="Texture" id=2]
+[ext_resource path="res://sourcecode/Actors/Traps/generador de bolas/light.png" type="Texture" id=3]
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 36.6667, 33.3333 )
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 37.1667, 33 )
+
+[sub_resource type="Animation" id=3]
+length = 0.001
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=4]
+resource_name = "mov"
+length = 1.5
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.38, 0.75, 1.13, 1.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( 0, -30 ), Vector2( 0, 0 ), Vector2( 0, 30 ), Vector2( 0, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.25, 0.5, 0.75, 1, 1.25, 1.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 0.219608, 1, 0, 1 ), Color( 1, 1, 1, 1 ), Color( 0.219608, 1, 0, 1 ), Color( 1, 1, 1, 1 ), Color( 0.290196, 1, 0, 1 ), Color( 1, 1, 1, 1 ) ]
+}
+
+[node name="Salud" type="Node2D"]
+scale = Vector2( 0.3, 0.3 )
+
+[node name="KinematicBody2D" type="KinematicBody2D" parent="."]
+scale = Vector2( 0.6, 0.6 )
+script = ExtResource( 1 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="KinematicBody2D"]
+shape = SubResource( 2 )
+disabled = true
+
+[node name="Sprite" type="Sprite" parent="KinematicBody2D"]
+scale = Vector2( 0.183333, 0.175 )
+texture = ExtResource( 2 )
+
+[node name="Area2D" type="Area2D" parent="KinematicBody2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="KinematicBody2D/Area2D"]
+shape = SubResource( 1 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="KinematicBody2D"]
+autoplay = "mov"
+anims/RESET = SubResource( 3 )
+anims/mov = SubResource( 4 )
+
+[node name="Light2D" type="Light2D" parent="KinematicBody2D"]
+position = Vector2( 0, 2.78418 )
+scale = Vector2( 0.146484, 0.15191 )
+texture = ExtResource( 3 )
+
+[connection signal="body_entered" from="KinematicBody2D/Area2D" to="KinematicBody2D" method="_on_Area2D_body_entered"]

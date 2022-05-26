@@ -114,6 +114,9 @@ margin_top = 279.0
 margin_right = 228.0
 margin_bottom = 299.0
 flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [connection signal="pressed" from="VBoxMenu/VBoxBotones/Jugar" to="." method="_on_Jugar_pressed"]
 [connection signal="pressed" from="VBoxMenu/VBoxBotones/Opc" to="." method="_on_Opciones_pressed"]
