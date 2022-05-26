@@ -11,5 +11,5 @@ dest_files=[ "res://.import/joanAuditivo.mp3-9f251b0a0b581e98a19a260ab2457181.mp
 
 [params]
 
-loop=true
+loop=false
 loop_offset=0

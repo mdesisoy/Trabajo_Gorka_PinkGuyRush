@@ -86,7 +86,7 @@ scale = Vector2( 0.8, 0.800002 )
 escena = "2"
 
 [node name="Player" parent="." groups=["player"] instance=ExtResource( 8 )]
-position = Vector2( 42, -56 )
+position = Vector2( 42, -45 )
 collision_mask = 31
 
 [node name="Cañones" type="Node2D" parent="."]

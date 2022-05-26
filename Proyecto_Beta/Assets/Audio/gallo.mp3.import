@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/gallo.mp3-e364fbb21237897e85a159936a951369.mp3str"
+
+[deps]
+
+source_file="res://Assets/Audio/gallo.mp3"
+dest_files=[ "res://.import/gallo.mp3-e364fbb21237897e85a159936a951369.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

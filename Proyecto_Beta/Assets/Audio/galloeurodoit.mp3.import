@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/galloeurodoit.mp3-6a743630d0d279fb74263d8c8e3ddf8e.mp3str"
+
+[deps]
+
+source_file="res://Assets/Audio/galloeurodoit.mp3"
+dest_files=[ "res://.import/galloeurodoit.mp3-6a743630d0d279fb74263d8c8e3ddf8e.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0
