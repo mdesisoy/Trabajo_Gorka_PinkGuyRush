@@ -10,6 +10,7 @@ const UP := Vector2(0, -1)
 
 var motion := Vector2()
 var health : int = 100
+var choque : true
 
 var _is_able_to_jump : bool
 var _jump_was_pressed : bool
