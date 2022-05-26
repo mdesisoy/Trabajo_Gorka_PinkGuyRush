@@ -94,17 +94,17 @@ collision_mask = 31
 [node name="Cañones" type="Node2D" parent="."]
 
 [node name="cañon1" parent="Cañones" instance=ExtResource( 9 )]
-position = Vector2( 1452, -179 )
+position = Vector2( 1448, -182 )
 rotation = 1.5708
 
 [node name="cañon2" parent="Cañones" instance=ExtResource( 9 )]
-position = Vector2( 3222, -279 )
+position = Vector2( 3222, -281 )
 
 [node name="cañon3" parent="Cañones" instance=ExtResource( 9 )]
-position = Vector2( 3904, -276 )
+position = Vector2( 3904, -265 )
 
 [node name="cañon" parent="Cañones" instance=ExtResource( 9 )]
-position = Vector2( 951, -175 )
+position = Vector2( 952, -184 )
 rotation = 4.71239
 
 [node name="Frutas" type="Node2D" parent="."]

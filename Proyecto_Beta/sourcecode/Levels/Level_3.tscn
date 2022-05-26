@@ -6,7 +6,6 @@
 [ext_resource path="res://sourcecode/Actors/Ambient/End_Point.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Portal/portal.tscn" type="PackedScene" id=5]
 [ext_resource path="res://sourcecode/Actors/Player/PinkGuy.tscn" type="PackedScene" id=6]
-[ext_resource path="res://sourcecode/fondos_edu/juanmeme.jpg" type="Texture" id=7]
 [ext_resource path="res://sourcecode/Tilesets/tileInvisible.tres" type="TileSet" id=8]
 [ext_resource path="res://sourcecode/Enemies/Chicken.tscn" type="PackedScene" id=9]
 [ext_resource path="res://sourcecode/Actors/Traps/Cañon/cañon.tscn" type="PackedScene" id=10]
@@ -17,6 +16,7 @@
 [ext_resource path="res://sourcecode/Actors/Collectables/Banana.tscn" type="PackedScene" id=15]
 [ext_resource path="res://sourcecode/Actors/Collectables/Apple.tscn" type="PackedScene" id=16]
 [ext_resource path="res://sourcecode/Interfaces/BarraSalud/BarraSalud.tscn" type="PackedScene" id=17]
+[ext_resource path="res://sourcecode/Actors/Ambient/juan.tscn" type="PackedScene" id=18]
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource( 11 )
@@ -81,17 +81,6 @@ scale = Vector2( 0.25, 0.25 )
 
 [node name="cañon2" parent="." instance=ExtResource( 10 )]
 position = Vector2( 1141.75, 482.307 )
-
-[node name="juanmeme2" type="Sprite" parent="."]
-position = Vector2( 2567.17, -1.87521 )
-scale = Vector2( 0.0806462, 0.0806462 )
-texture = ExtResource( 7 )
-
-[node name="juanmeme" type="Sprite" parent="."]
-position = Vector2( -46.4171, 414.499 )
-scale = Vector2( 0.08, 0.08 )
-texture = ExtResource( 7 )
-offset = Vector2( 0, -38.48 )
 
 [node name="g_1" parent="." instance=ExtResource( 9 )]
 position = Vector2( 303, 46 )
@@ -361,3 +350,10 @@ position = Vector2( 5504, -90 )
 
 [node name="BarraSalud" parent="." instance=ExtResource( 17 )]
 player_node = NodePath("../Player")
+
+[node name="juan" parent="." instance=ExtResource( 18 )]
+position = Vector2( 2568, 0 )
+scale = Vector2( 0.75, 0.75 )
+
+[node name="juan2" parent="." instance=ExtResource( 18 )]
+position = Vector2( -32, 408 )

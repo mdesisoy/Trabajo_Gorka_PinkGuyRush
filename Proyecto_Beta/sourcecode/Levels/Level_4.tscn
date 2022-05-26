@@ -1,7 +1,7 @@
 [gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://sourcecode/fondos_edu/burrote.jpg" type="Texture" id=1]
-[ext_resource path="res://sourcecode/fondos_edu/juanmeme.jpg" type="Texture" id=2]
+[ext_resource path="res://sourcecode/Actors/Ambient/juan.tscn" type="PackedScene" id=2]
 [ext_resource path="res://sourcecode/Tilesets/tileInvisible.tres" type="TileSet" id=3]
 [ext_resource path="res://sourcecode/Actors/Ambient/Start_point.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Portal/portal.tscn" type="PackedScene" id=5]
@@ -97,11 +97,6 @@ position = Vector2( 112.736, 49.7294 )
 current = true
 zoom = Vector2( 0.25, 0.25 )
 smoothing_enabled = true
-
-[node name="juanmeme" type="Sprite" parent="."]
-position = Vector2( 470.318, 306.733 )
-scale = Vector2( 0.08, 0.08 )
-texture = ExtResource( 2 )
 
 [node name="gallina_little" parent="." instance=ExtResource( 9 )]
 position = Vector2( -541.591, 121.206 )
@@ -272,3 +267,6 @@ position = Vector2( 1120, -1488 )
 
 [node name="BarraSalud" parent="." instance=ExtResource( 17 )]
 player_node = NodePath("../Player")
+
+[node name="juan" parent="." instance=ExtResource( 2 )]
+position = Vector2( 456, 296 )
