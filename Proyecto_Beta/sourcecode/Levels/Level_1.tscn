@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=2]
+[gd_scene load_steps=24 format=2]
 
 [ext_resource path="res://sourcecode/Tilesets/tilesetLevel1.tres" type="TileSet" id=1]
 [ext_resource path="res://sourcecode/Actors/Ambient/Start_point.tscn" type="PackedScene" id=2]
@@ -21,6 +21,8 @@
 [ext_resource path="res://escenas/MusicaLevel1.tscn" type="PackedScene" id=19]
 [ext_resource path="res://sourcecode/Interfaces/BarraSalud/BarraSalud.tscn" type="PackedScene" id=20]
 [ext_resource path="res://sourcecode/Actors/Ambient/Salud/Salud.tscn" type="PackedScene" id=21]
+[ext_resource path="res://sourcecode/Actors/Traps/Pincho/Pincho.tscn" type="PackedScene" id=22]
+[ext_resource path="res://sourcecode/Actors/Traps/generador de bolas/GeneradorBola.tscn" type="PackedScene" id=23]
 
 [node name="Level_1" type="Node2D"]
 script = ExtResource( 10 )
@@ -92,13 +94,18 @@ collision_mask = 31
 [node name="Cañones" type="Node2D" parent="."]
 
 [node name="cañon1" parent="Cañones" instance=ExtResource( 9 )]
-position = Vector2( 1104, -176 )
+position = Vector2( 1452, -179 )
+rotation = 1.5708
 
 [node name="cañon2" parent="Cañones" instance=ExtResource( 9 )]
-position = Vector2( 3376, -176 )
+position = Vector2( 3222, -279 )
 
 [node name="cañon3" parent="Cañones" instance=ExtResource( 9 )]
-position = Vector2( 3904, -272 )
+position = Vector2( 3904, -276 )
+
+[node name="cañon" parent="Cañones" instance=ExtResource( 9 )]
+position = Vector2( 951, -175 )
+rotation = 4.71239
 
 [node name="Frutas" type="Node2D" parent="."]
 position = Vector2( 0, -16 )
@@ -128,7 +135,7 @@ position = Vector2( 920, -72 )
 position = Vector2( 960, -56 )
 
 [node name="Apple6" parent="Frutas" instance=ExtResource( 13 )]
-position = Vector2( 1320, -72 )
+position = Vector2( 1321, -72 )
 
 [node name="Banana4" parent="Frutas" instance=ExtResource( 11 )]
 position = Vector2( 1792, -40 )
@@ -161,10 +168,10 @@ position = Vector2( 3192, -152 )
 position = Vector2( 3216, -80 )
 
 [node name="Banana6" parent="Frutas" instance=ExtResource( 11 )]
-position = Vector2( 3376, -280 )
+position = Vector2( 3503, -122 )
 
 [node name="Apple15" parent="Frutas" instance=ExtResource( 13 )]
-position = Vector2( 3720, -176 )
+position = Vector2( 3766, -161 )
 
 [node name="Banana7" parent="Frutas" instance=ExtResource( 11 )]
 position = Vector2( 3904, -344 )
@@ -243,3 +250,62 @@ player_node = NodePath("../Player")
 [node name="Salud" parent="." instance=ExtResource( 21 )]
 position = Vector2( 291, -80 )
 scale = Vector2( 0.6, 0.6 )
+
+[node name="Traps" type="Node2D" parent="."]
+
+[node name="Pincho" parent="Traps" instance=ExtResource( 22 )]
+position = Vector2( 489, -230 )
+
+[node name="Pincho2" parent="Traps" instance=ExtResource( 22 )]
+position = Vector2( 729, -231 )
+
+[node name="Pincho3" parent="Traps" instance=ExtResource( 22 )]
+position = Vector2( 536, -231 )
+
+[node name="Pincho4" parent="Traps" instance=ExtResource( 22 )]
+position = Vector2( 968, -40 )
+
+[node name="Pincho5" parent="Traps" instance=ExtResource( 22 )]
+position = Vector2( 984, -40 )
+
+[node name="Pincho6" parent="Traps" instance=ExtResource( 22 )]
+position = Vector2( 777, -232 )
+
+[node name="Pincho7" parent="Traps" instance=ExtResource( 22 )]
+position = Vector2( 729, -39 )
+
+[node name="Pincho8" parent="Traps" instance=ExtResource( 22 )]
+position = Vector2( 1417, -23 )
+
+[node name="Pincho9" parent="Traps" instance=ExtResource( 22 )]
+position = Vector2( 1401, -23 )
+
+[node name="Pincho10" parent="Traps" instance=ExtResource( 22 )]
+position = Vector2( 1385, -23 )
+
+[node name="GeneradorPincho" parent="Traps" instance=ExtResource( 23 )]
+position = Vector2( 1326, -474 )
+
+[node name="GeneradorPincho2" parent="Traps" instance=ExtResource( 23 )]
+position = Vector2( 1654, -475 )
+
+[node name="Pincho11" parent="Traps" instance=ExtResource( 22 )]
+position = Vector2( 3578, -167 )
+
+[node name="GeneradorPincho3" parent="Traps" instance=ExtResource( 23 )]
+position = Vector2( 3384, -488 )
+
+[node name="GeneradorPincho4" parent="Traps" instance=ExtResource( 23 )]
+position = Vector2( 4131, -502 )
+
+[node name="Pincho12" parent="Traps" instance=ExtResource( 22 )]
+position = Vector2( 3783, -119 )
+
+[node name="Pincho13" parent="Traps" instance=ExtResource( 22 )]
+position = Vector2( 2728, -88 )
+
+[node name="Pincho14" parent="Traps" instance=ExtResource( 22 )]
+position = Vector2( 2953, -87 )
+
+[node name="Pincho15" parent="Traps" instance=ExtResource( 22 )]
+position = Vector2( 2858, -23 )
