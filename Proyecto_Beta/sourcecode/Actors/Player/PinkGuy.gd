@@ -10,6 +10,7 @@ const SPEED=150
 const GRAVITY=9
 const JUMPFORCE=-230
 const FLOOR=Vector2(0,-1)
+var salto_infinito_caca = 0
 
 func _physics_process(delta):
 	if get_position().y > LIMITE_ABAJO:
@@ -24,7 +25,7 @@ func _physics_process(delta):
 		$AnimatedSprite.flip_h=true
 	else:
 		$AnimatedSprite.play("Idle")
-	if Input.is_action_just_pressed("Up"):
+	if Input.is_action_just_pressed("Up") and salto_infinito_caca<1:
 		if on_ground ==true:
 			movement.y=JUMPFORCE
 			on_ground=false
@@ -34,7 +35,8 @@ func _physics_process(delta):
 			on_ground=false
 			$JumpFX.stop()
 			$JumpFX.play(0)
-		
+		if nextToWall():
+			salto_infinito_caca+=1
 	movement.y+=GRAVITY	
 	movement=move_and_slide(movement,FLOOR)
 	movement.x=lerp(movement.x,0,0.1)
@@ -70,6 +72,8 @@ func _physics_process(delta):
 		if nextToLeftWall():
 			$AnimatedSprite.flip_h=true
 			$AnimatedSprite.play("Wall")
+	if !nextToWall():
+		salto_infinito_caca = 0
 
 func nextToWall():
 	return nextToRightWall() or nextToLeftWall()
