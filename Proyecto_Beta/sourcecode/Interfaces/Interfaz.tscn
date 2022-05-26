@@ -93,13 +93,10 @@ margin_top = 32.0
 margin_right = 112.0
 margin_bottom = 96.0
 custom_fonts/font = SubResource( 1 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 position = Vector2( 64, 64 )
 scale = Vector2( 4, 4 )
 frames = SubResource( 19 )
-frame = 9
+frame = 1
 playing = true
