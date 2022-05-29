@@ -102,6 +102,9 @@ func vida_cero():
 		Gvars.vidas -= 1
 		if Gvars.vidas == 0:
 			get_tree().change_scene("res://sourcecode/Levels/Level_1.tscn")
+			MusicaLevel2._stop_music();
+			MusicaLevel3._stop_music();
+			MusicaLevel4._stop_music();
 			Gvars.vidas = 6
 		else:
 			get_tree().reload_current_scene()
